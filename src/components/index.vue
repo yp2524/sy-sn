@@ -93,5 +93,6 @@ export default {
 }
 .index-bottom>div>.love{
     font-weight:bolder;
+    color: #000;
 }
 </style>
