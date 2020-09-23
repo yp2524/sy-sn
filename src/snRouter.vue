@@ -1,12 +1,53 @@
 <script>
-import index from "./components/index.vue"
+import index from "./components/index.vue";
+import classify from "./components/home/classify.vue";
+import favorite from "./components/home/favorite.vue";
+import mine from "./components/home/mine.vue";
+import rankinglist from "./components/home/ranklist.vue";
+import roblist from "./components/home/roblisting.vue";
+import shopcart from "./components/home/shopcart.vue";
 import Vue from "vue";
-import VueRouter from 'vue-router';
+import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
+//重复点击报错问题解决
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err);
+};
+
 export default new VueRouter({
-    routes:[
-        {path:'/',component:index}
-    ]
-})
+  routes: [
+    {
+      path: "/",
+      component: index,
+      children: [
+        {
+          path: "/favorite",
+          component: favorite
+        },
+        {
+          path: "/classify",
+          component: classify
+        },
+        {
+          path: "/roblist",
+          component: roblist
+        },
+        {
+          path: "/shopcart",
+          component: shopcart
+        },
+        {
+          path: "/mine",
+          component: mine
+        }
+      ]
+    },
+    {
+      path: "/rankinglist",
+      component: rankinglist
+    }
+  ]
+});
 </script>
