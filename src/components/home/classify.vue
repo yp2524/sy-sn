@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="prolist">
-            <component :is="comName"></component>
+            <component :is="comName" :num="num"></component>
         </div>
     </div>
    
@@ -25,6 +25,16 @@
 
 <script>
 import hotRecom from "./classifyCom/hotRecom.vue";
+import phone from "./classifyCom/phone.vue";
+import household from "./classifyCom/household.vue";
+import computer from "./classifyCom/computer.vue";
+import cook from "./classifyCom/cook.vue";
+import life from "./classifyCom/life.vue";
+import food from "./classifyCom/food.vue";
+import personalCare from "./classifyCom/personalCare.vue";
+import beautiful from "./classifyCom/beautiful.vue";
+import milkPowder from "./classifyCom/milkPowder.vue";
+import internation from "./classifyCom/internation.vue";
 import axios from 'axios';
 export default {
     data(){
@@ -40,7 +50,6 @@ export default {
         axios.get(url).then(function(response){
             let result=response.data.proMenu;
             that.classMenuList=result;
-            console.log(result)
         })
         .catch(function(error){
             console.log(error);
@@ -50,10 +59,22 @@ export default {
     methods:{
         subClick(index){
             this.num=index;
+            this.comName=this.classMenuList[this.num].comName;
         }
     },
     components:{
-        "hotRecom":hotRecom
+        "hotRecom":hotRecom,
+        "phone":phone,
+        "household":household,
+        "computer":computer,
+        "cook":cook,
+        "life":life,
+        "food":food,
+        "personalCare":personalCare,
+        "beautiful":beautiful,
+        "milkPowder":milkPowder,
+        "internation":internation
+
     }
     
 
@@ -102,10 +123,10 @@ html,body,.classify{
     overflow: auto;
 }
 .classify-main>.classify-menu li{
-    height: 50px;
+    height: 45px;
     text-align: center;
-    line-height: 50px;
-    font-size: 14px;
+    line-height: 45px;
+    font-size: 12px;
     color: #666;
 }
 .classify-main>.prolist{
@@ -125,7 +146,7 @@ html,body,.classify{
     width: 4px;
     border-radius: 2px;
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 8%;
     
 }
