@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+    <keep-alive>
       <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import router from "./snRouter.vue"
+import router from "./snRouter.vue";
+
 export default {
   name: 'App',
   router:router
@@ -18,7 +21,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-html, body,#app{
-    height: 100%;
-}
+html,body,#app{
+  height: 100%;
+} 
 </style>

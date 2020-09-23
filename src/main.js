@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import App from './App.vue';
-
 // swiper插件
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import Swiper,{Navigation,Autoplay,Pagination} from 'swiper';

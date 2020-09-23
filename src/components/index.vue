@@ -1,8 +1,11 @@
 <template>
   <div class="main">
-    <component :is="comName"></component>
+    <keep-alive>
+        <router-view></router-view>
+    </keep-alive>
+
     <template>
-      <div class="index-bottom">
+      <div class="index-bottom">           
             <div v-if="comName=='favorite'" @click="changeCom('favorite')">
                 <img src="../images/bottomImg/heart-yellow.png" alt="">
                 <p class="love">猜你喜欢</p>
@@ -17,13 +20,20 @@
                 <img v-else src="../images/bottomImg/magglass.png" alt="">
                  <p>分类</p>
             </div>
-
-            <div @click="changeCom('rankinglist')">
-                <img v-if="comName=='rankinglist'" src="../images/bottomImg/ranklist-yellow.png" alt="">
-                <img v-else src="../images/bottomImg/ranklist.png" alt="">
-                <p>排行榜</p>
-            </div>
-
+            <template v-if="comName=='favorite'">
+                <div @click="changeCom('rankinglist')">
+                    <img v-if="comName=='rankinglist'" src="../images/bottomImg/ranklist-yellow.png" alt="">
+                    <img v-else src="../images/bottomImg/ranklist.png" alt="">
+                    <p>排行榜</p>
+                </div>
+            </template>
+            <template v-else>
+                <div @click="changeCom('roblist')">
+                    <img v-if="comName=='rankinglist'" src="../images/bottomImg/ranklist-yellow.png" alt="">
+                    <img v-else src="../images/bottomImg/ranklist.png" alt="">
+                    <p>必抢清单</p>
+                </div>
+            </template>
             <div @click="changeCom('shopcart')">
                 <img v-if="comName=='shopcart'" src="../images/bottomImg/cart-yellow.png" alt="">
                 <img v-else src="../images/bottomImg/cart.png" alt="">
@@ -40,41 +50,32 @@
   </div>
 </template>
 <script>
-import classify from "./home/classify.vue";
-import favorite from "./home/favorite.vue";
-import mine from "./home/mine.vue";
-import rankinglist from "./home/ranklist.vue";
-import roblist from "./home/roblisting.vue";
-import shopcart from "./home/shopcart.vue";
-
 export default {
   data() {
     return {
         comName:"favorite"
     }
   },
-  components: {
-    "classify": classify,
-    "favorite": favorite,
-    "mine": mine,
-    "rankinglist": rankinglist,
-    "roblist": roblist,
-    "shopcart": shopcart
-  },
   methods:{
       changeCom(name){
           this.comName=name;
+          this.$router.push({path:`/${name}`})
       }
   }
 };
 </script>
 <style scoped>
+.main{
+    height: 100%;
+}
 .index-bottom{
     position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: row;
     width: 100%;
+    background-color: #fff;
+    flex-shrink: 0;
 }
 .index-bottom>div{
     width: 25%;
