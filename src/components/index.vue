@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <component :is="comName"></component>
     <template>
       <div class="index-bottom">
@@ -93,5 +93,9 @@ export default {
 }
 .index-bottom>div>.love{
     font-weight:bolder;
+}
+.main{
+    width: 100%;
+    height: 100%;
 }
 </style>
