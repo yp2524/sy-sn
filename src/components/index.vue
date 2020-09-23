@@ -96,4 +96,8 @@ export default {
     font-weight:bolder;
     color: #000;
 }
+.main{
+    width: 100%;
+    height: 100%;
+}
 </style>
