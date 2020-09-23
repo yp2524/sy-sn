@@ -7,8 +7,9 @@ Swiper.use([Navigation,Autoplay,Pagination]);
 Vue.use(VueAwesomeSwiper);
 import "swiper/swiper-bundle.css";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 import "./iconfont/iconfont.css";
+
 
 new Vue({
   render: h => h(App),
