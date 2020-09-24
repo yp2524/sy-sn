@@ -12,6 +12,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/tea5.jpg"
             ],
             "price":"19.90",
+            "evaluateNum":"9900+评价",
             "evalute":"送的小茶包真心不好喝，清气太重了，大包还没来得及喝，随后追评",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/teaevaImg.jpg",
             "detailImg":[
@@ -36,6 +37,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/sweet5.jpg"
             ],
             "price":"32.80",
+            "evaluateNum":"4500+评价",
             "evalute":"好吃还行。。。。。。",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/sweetEva.jpg",
             "detailImg":[
@@ -50,7 +52,7 @@
         },
         {
             "shopName":"卿卿雨红枣官方旗舰店",
-            "proName":"卿卿雨 250克/袋 香酥脆枣",
+            "proName":"卿卿雨 250克/袋 香酥脆枣 买一送一",
             "introduce":"香酥脆甜，今年新货，不好吃全额退你钱",
             "images":[
                 "http://127.0.0.1:5500/src/images/productImg/jujube1.jpg",
@@ -60,6 +62,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/jujube5.png"
             ],
             "price":"9.90",
+            "evaluateNum":"25万+评价",
             "evalute":"味道不错，香脆可口，满意，好评。",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/jujubeEva.jpg",
             "detailImg":[
@@ -84,6 +87,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/apple5.jpg"
             ],
             "price":"26.80",
+            "evaluateNum":"70万+评价",
             "evalute":"",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/appleEva.jpg",
             "detailImg":[

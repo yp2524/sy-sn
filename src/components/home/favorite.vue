@@ -1,13 +1,19 @@
 <template>
     <div class="favorite-component">
+
         <!-- 固定定位 -->
         <div class="fix-pic">
             <a href="">
                 <img src="../../images/favImg/fix.png" alt="">
             </a>
+            <a href="#anchor" class="top">
+                <img src="../../images/favImg/top.png" alt="">
+            </a>
         </div>
         <!-- head -->
         <div class="fav-head">
+            <!-- 锚点 -->
+            <a href="" id="anchor"></a>
             <div class="fav-head-up">
                 <div class="fav-head-img">
                     <img src="../../images/favImg/head-classify.png" alt="">
@@ -74,62 +80,62 @@
             <div class="wrapper">
                 <ul class="fix">
                     <li class="fix-li">
-                        <a href="" class="fix-li-item">
+                        <a href="https://qiang.suning.com/greatBenefit/m/index.html?safp=f73ee1cf.wapindex7.113456729859.1&safpn=10001" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-miaosha.png" alt="">
                             </div>
                             <div class="fix-li-title">苏宁秒杀</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://c.m.suning.com/supercs.html?safp=f73ee1cf.wapindex7.113456729859.2&safpn=10001" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-shopping.png" alt="">
                             </div>
                             <div class="fix-li-title">苏宁超市</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://c.m.suning.com/group_index.html" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-pingou.png" alt="">
                             </div>
                             <div class="fix-li-title">苏宁拼购</div>
                         </a>
-                          <a href="" class="fix-li-item">
+                          <a href="https://c.m.suning.com/Wan3C.html" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-shuma.png" alt="">
                             </div>
                             <div class="fix-li-title">手机数码</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://c.m.suning.com/snjdyq.html" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-jiadian.png" alt="">
                             </div>
                             <div class="fix-li-title">苏宁家电</div>
                         </a>
 
-                         <a href="" class="fix-li-item">
+                         <a href="https://m.suning.com/" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-freefruits.png" alt="">
                             </div>
                             <div class="fix-li-title">免费水果</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://m.suning.com/" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-xiaoxiaole.png" alt="">
                             </div>
                             <div class="fix-li-title">赚钱消消乐</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://res.m.suning.com/project/coupon/dist/center.html#/type/1" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-sign.png" alt="">
                             </div>
                             <div class="fix-li-title">签到有礼</div>
                         </a>
-                          <a href="" class="fix-li-item">
+                          <a href="https://m.suning.com/" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-lingjuan.png" alt="">
                             </div>
                             <div class="fix-li-title">领券中心</div>
                         </a>
-                        <a href="" class="fix-li-item">
+                        <a href="https://c.m.suning.com/channelNSQ.html" class="fix-li-item">
                             <div class="fix-li-img">
                                 <img src="../../images/favImg/sn-more.png" alt="">
                             </div>
@@ -142,15 +148,15 @@
 
             <!-- 新人礼包 -->
             <div class="newBag">
-               <a href="" class="newBag-left">
+               <a href="https://newmem.suning.com/newmem-web/nm/PAGE518604586267131904.htm" class="newBag-left">
                    <img src="../../images/favImg/gift1.gif" alt="">
                </a>
                <a href="" class="newBag-useless"></a>
-               <a href="" class="newBag-right">
+               <a href="https://newmem.suning.com/newmem-web/nm/PAGE518604586267131904.htm" class="newBag-right">
                    <img src="../../images/favImg/gift2.gif" alt="">
                </a>
                <a href="" class="newBag-useless"></a>
-               <a href="" class="newBag-right">
+               <a href="https://newmem.suning.com/newmem-web/nm/PAGE518604586267131904.htm" class="newBag-right">
                    <img src="../../images/favImg/gift3.gif" alt="">
                </a>
             </div>
@@ -175,14 +181,14 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/lowprice1.jpg" alt="">
                                     <p class="low-price-label">
                                         <span>￥</span>
                                         <span>1.1</span>
                                     </p>
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/lowprice2.jpg" alt="">
                                     <p class="low-price-label">
                                         <span>￥</span>
@@ -202,11 +208,11 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/lowprice3.jpg" alt="">
                                     <div class="img-desk">美可卓</div>
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/lowprice4.png" alt="">
                                     <div class="img-desk">一对活宝</div>
                                 </a>
@@ -226,11 +232,11 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/butie1.jpg" alt="">
                                     <div class="img-desk">补贴价4699</div>
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/butie2.jpg" alt="">
                                    <div class="img-desk">补贴价168</div>
                                 </a>
@@ -247,11 +253,11 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/pingou1.jpg" alt="">
                                     <div class="img-desk">2人拼9.9</div>
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/pingou2.jpg" alt="">
                                     <div class="img-desk">2人拼4699元</div>
                                 </a>
@@ -263,25 +269,25 @@
             <!-- 为您推荐 -->
             <div class="fav-low-price recommend">
                 <div class="recommend-left">
-                    <a href="">
+                    <a href="https://m.suning.com">
                         <p class="recommend-p1">为您推荐</p>
                         <p class="recommend-p2">精选频道</p>
                     </a>
                 </div>
                 <div class="recommend-right">
-                    <a href="">
+                    <a href="https://m.suning.com">
                         <img src="../../images/favImg/recommend1.jpg" alt="">
                         <p>苏宁国际</p>
                     </a>
-                    <a href="">
+                    <a href="https://m.suning.com">
                         <img src="../../images/favImg/recommend2.jpg" alt="">
                         <p>苏宁Outlets</p>
                     </a>
-                    <a href="">
+                    <a href="https://m.suning.com">
                         <img src="../../images/favImg/recommend3.png" alt="">
                         <p>新品首发</p>
                     </a>
-                    <a href="">
+                    <a href="https://m.suning.com">
                         <img src="../../images/favImg/recommend4.jpg" alt="">
                         <p>0元试用</p>
                     </a>
@@ -294,50 +300,44 @@
                 <div class="recommend-content">
                     <!-- 第一行 -->
                     <div class="recommend-row-one">
-                        <a href="">
+                        <a href="https://m.suning.com" class="one-a">
                             <img src="../../images/favImg/recommend5.jpg" alt="" class="recommend-row-pic">
                             <div class="recommend-row-one-down">
                                 <div class="recommend-bg">
                                     <img src="../../images/favImg/recommend-bg.png" alt="">
                                 </div>
                                 <div class="recommend-bg-title">
-                                    <p class="row-one-p1">
-                                        <span>人气榜</span>
-                                    </p>
-                                    <p class="row-one-p2">甄选营养纯奶榜</p>
+                                    <p class="row-one-p1">人气榜</p>
                                     <p class="row-one-p2">卖爆24.5万件</p>
+                                    <p class="row-one-p2">甄选营养纯奶榜</p>
                                 </div>
                             </div>
                         </a>
                         <div class="recommend-useless"></div>
-                        <a href="">
+                        <a href="https://m.suning.com" class="one-a">
                             <img src="../../images/favImg/recommend6.jpg" alt="" class="recommend-row-pic">
                             <div class="recommend-row-one-down">
                                 <div class="recommend-bg">
                                     <img src="../../images/favImg/recommend-bg.png" alt="">
                                 </div>
                                 <div class="recommend-bg-title">
-                                    <p class="row-one-p1">
-                                        <span>人气榜</span>
-                                    </p>
-                                    <p class="row-one-p2">休闲补脑坚果榜</p>
+                                    <p class="row-one-p1">人气榜</p>
                                     <p class="row-one-p2">卖爆24.5万件</p>
+                                    <p class="row-one-p2">休闲补脑坚果榜</p>
                                 </div>
                             </div>
                         </a>
                         <div class="recommend-useless"></div>
-                        <a href="">
+                        <a href="https://m.suning.com" class="one-a">
                             <img src="../../images/favImg/recommend8.jpg" alt="" class="recommend-row-pic">
                             <div class="recommend-row-one-down">
                                 <div class="recommend-bg">
                                     <img src="../../images/favImg/recommend-bg.png" alt="">
                                 </div>
                                 <div class="recommend-bg-title">
-                                    <p class="row-one-p1">
-                                        <span>人气榜</span>
-                                    </p>
-                                    <p class="row-one-p2">零食糕点榜</p>
+                                    <p class="row-one-p1">人气榜</p>
                                     <p class="row-one-p2">卖爆17.2万件</p>
+                                    <p class="row-one-p2">零食糕点榜</p>
                                 </div>
                             </div>
                         </a>                        
@@ -359,10 +359,10 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/chaoliu1.jpg" alt="">
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/chaoliu2.jpg" alt="">
                                 </a>
                             </li>
@@ -379,10 +379,10 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/fuwu1.jpg" alt="">
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/fuwu1.jpg" alt="">
                                 </a>
                             </li>
@@ -402,10 +402,10 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/diannao1.jpg" alt="">
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/diannao2.jpg" alt="">
                                 </a>
                             </li>
@@ -422,10 +422,10 @@
                     <div class="low-price-goods">
                         <ul class="low-price-goods-ul">
                             <li class="low-price-goods-li">
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/kongtiao1.jpg" alt="">
                                 </a>
-                                <a href="">
+                                <a href="https://m.suning.com">
                                     <img src="../../images/favImg/kongtiao2.jpg" alt="">
                                 </a>
                             </li>
@@ -437,11 +437,26 @@
             <div class="like">
                 <img src="../../images/favImg/like.png" alt="">
             </div>
+            <div class="like-content">
+                <div v-for="(item,index) in list" :key="index" class="like-item">
+                    <div class="imgBox">
+                        <img :src="item.images[0]" alt="">
+                    </div>
+                    <p class="proName">{{item.proName}}</p>
+                    <p class="shopName">{{item.shopName}}</p>
+                    <div class="pro-price">
+                        <span class="dollar">￥</span>
+                        <span class="price">{{item.price}}</span>
+                        <span class="evaluateNum">{{item.evaluateNum}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
@@ -459,16 +474,19 @@ export default {
             h: '',
             m: '',
             s: '',
-            sum_h: ''            
+            sum_h: '',
+            //v-for 循环
+            list:[],
+
         }
     },
     computed: {
       swiper() {
         return this.$refs.mySwiper.$swiper
-      }
+      }, 
     },
 
-     methods:{
+    methods:{
          countTime: function () {
             // 获取当前时间
             var date = new Date();
@@ -492,9 +510,20 @@ export default {
       }
    },
 
-   mounted(){
+    mounted(){
        this.countTime()
    },
+    created(){
+        let that = this;
+        let url = "http://127.0.0.1:5500/src/data/prolist.json";
+        axios.get(url)
+        .then(function(response){
+            let result = response.data.proMenu;
+            // console.log(result);
+            that.list = result;
+            console.log(that.list)
+        })
+   }
 }
 </script>
 
@@ -519,6 +548,9 @@ a{
 }
 .fix-pic a img{
     width: 100%;
+}
+.top img{
+    margin-top: 20px;
 }
 /* head */
 .fav-head{
@@ -819,10 +851,6 @@ a{
     font-weight: bold;
     padding: 5px 12px 10px;
 }
-/* .recommend-content{
-    display: flex;
-    flex-direction: column;
-} */
 .recommend-row-one{
     display: flex;
     flex-direction: row;
@@ -840,37 +868,43 @@ a{
 }
 .recommend-row-one-down{
     width: 100%;
-    position: relative;
 }
 .recommend-bg{
     width: 100%;
 }
+.one-a{
+    position: relative;
+}
 .recommend-bg-title{
-    position: absolute;
-    left: 10px;
-    top: -12px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
     flex-shrink: 0;
+    position: absolute;
+    top: 83px;
+    display: flex;
+    flex-direction: column;
+}
+.recommend-bg-title p{
+    text-align: center;
 }
 .recommend-bg img{
     width: 100%;
 }
-.row-one-p1 span{
-    width: 50%;
+.row-one-p1{
+    position: absolute;
+    display: inline-block;
     font-size: 10px;
     border-radius: 7px;
-    margin: 0 auto;
-    border: 1px solid #eee;
+    color: #D9A87A;
+    border: 1px solid #D9A87A;
     background: white;
-    /* text-align: center; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     flex-shrink: 0;
 }
 .row-one-p2{
+    display: block;
     color: white;
     font-size: 13px;
     display: flex;
@@ -916,6 +950,66 @@ a{
 .like img{
     width: 100%;
     height: 100%;
+}
+
+/* 猜你喜欢v-for循环 */
+.like-content{
+    width: 100%;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.like-item{
+    width: 49%;
+    padding: 0px 5px;
+    background-color: white;
+    margin-top: 8px;
+}
+.imgBox{
+    width: 100%;
+}
+.imgBox img{
+    width: 100%;
+}
+.proName{
+    width: 100%;
+    height: 43px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 4px 0px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+.shopName{
+    display: inline-block;
+    font-size: 10px;
+    padding: 0 4px;
+    color: white;
+    background: #7A51FA;
+    border-radius: 5px;
+}
+.pro-price{
+    flex-shrink: 0;
+    padding: 5px 0 10px 0 ;
+}
+.dollar{
+    font-size: 14px;
+    color: #FF4422;
+}
+.price{
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF4422; 
+}
+.evaluateNum{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px;
 }
 </style>
 
