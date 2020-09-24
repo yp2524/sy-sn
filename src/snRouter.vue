@@ -6,6 +6,9 @@ import mine from "./components/home/mine.vue";
 import rankinglist from "./components/home/ranklist.vue";
 import roblist from "./components/home/roblisting.vue";
 import shopcart from "./components/home/shopcart.vue";
+
+import login from "./components/home/login.vue"//登录界面
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
@@ -40,7 +43,7 @@ export default new VueRouter({
         },
         {
           path: "/mine",
-          component: mine
+          component: login
         }
       ]
     },

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1148163",
+      "name": "问卷调查",
+      "font_class": "poll-copy",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "802115",
       "name": "拼购",
       "font_class": "icon",
