@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="prolist">
-            <component :is="comName" :num="num"></component>
+            <component :is="comName" :num="comsnum"></component>
         </div>
     </div>
    
@@ -30,18 +30,14 @@ import household from "./classifyCom/household.vue";
 import computer from "./classifyCom/computer.vue";
 import cook from "./classifyCom/cook.vue";
 import life from "./classifyCom/life.vue";
-import food from "./classifyCom/food.vue";
-import personalCare from "./classifyCom/personalCare.vue";
-import beautiful from "./classifyCom/beautiful.vue";
-import milkPowder from "./classifyCom/milkPowder.vue";
-import internation from "./classifyCom/internation.vue";
 import axios from 'axios';
 export default {
     data(){
         return{
             classMenuList:{},
             num:0,
-            comName:"hotRecom"
+            comName:"hotRecom",
+            comsnum:0
         }
     },
     created(){
@@ -59,7 +55,8 @@ export default {
     methods:{
         subClick(index){
             this.num=index;
-            this.comName=this.classMenuList[this.num].comName;
+            this.comsnum=index%6;
+            this.comName=this.classMenuList[index].comName;
         }
     },
     components:{
@@ -68,13 +65,7 @@ export default {
         "household":household,
         "computer":computer,
         "cook":cook,
-        "life":life,
-        "food":food,
-        "personalCare":personalCare,
-        "beautiful":beautiful,
-        "milkPowder":milkPowder,
-        "internation":internation
-
+        "life":life
     }
     
 

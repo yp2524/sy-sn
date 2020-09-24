@@ -620,118 +620,403 @@
         },
         {
             "menuTitle":"厨卫大电",
-            "comName":"cook"
+            "comName":"cook",
+            "proList":[
+                {
+                    "proTit":"厨卫电器",
+                    "details":[
+                        {
+                            "proImg":"http://127.0.0.1:5500/src/images/classifyImg/airconditioner.jpg",
+                            "proName":"空调挂机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1565577940430_imgWap_tmndir.png",
+                            "proName":"空调柜机"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1565254593244_imgWap_tmndir.png",
+                            "proName":"移动空调"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1589965553419_imgWap_tmndir.jpg",
+                            "proName":"风管机"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1589965652811_imgWap_tmndir.jpg",
+                            "proName":"多联机"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1528099789688_imgApp_tmndir.jpg",
+                            "proName":"一级能效"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1584934565966_imgWap_tmndir.jpg",
+                            "proName":"以旧换新"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1571813034518_pc_list.png",
+                            "proName":"0元安装"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1563936488169_imgWap_tmndir.jpg",
+                            "proName":"空调免息"
+                        } 
+                    ]
+                },
+                {
+                    "proTit":"卫浴电器",
+                    "details":[
+                        {
+                            "proImg":"http://127.0.0.1:5500/src/images/classifyImg/refrigerator.jpg",
+                            "proName":"冰箱"
+                        },
+                        {
+                            "proImg":"http://image3.suning.cn/uimg/asbs/ad/1493018418117_pc_list.jpg",
+                            "proName":"多门冰箱"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1493018401008_pc_list.jpg",
+                            "proName":"对开门冰箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn//uimg/cms/img/158631774178587558.jpg",
+                            "proName":"三门冰箱"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1493880401566_app_wap_list.jpg",
+                            "proName":"双门冰箱"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1493880505962_app_wap_list.jpg",
+                            "proName":"商用冰柜"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn//uimg/cms/img/158632854592055477.jpg",
+                            "proName":"家用冰柜"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1543827677996_imgWap_tmndir.png",
+                            "proName":"红酒柜"
+                        }
+                    ]
+                },
+                {
+                    "proTit":"优质品牌",
+                    "details":[
+                        {
+                            "proImg":"http://127.0.0.1:5500/src/images/classifyImg/washing.jpg",
+                            "proName":"洗烘一体机"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1493018459245_pc_list.jpg",
+                            "proName":"滚筒洗衣机"
+                        },
+                        {
+                            "proImg":"http://image3.suning.cn/uimg/asbs/ad/1493950779575_app_wap_list.jpg",
+                            "proName":"波轮洗衣机"
+                        },
+                        {
+                            "proImg":"http://image3.suning.cn/uimg/asbs/ad/1594193045540_imgWap_tmndir.jpg",
+                            "proName":"大容量洗衣机"
+                        },
+                        {
+                            "proImg":"http://image3.suning.cn/uimg/asbs/ad/1574157198283_app_wap_list.jpg",
+                            "proName":"迷你洗衣机"
+                        },
+                        {  
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1502271897878_app_wap_list.png",
+                            "proName":"烘干机"
+                            
+                        }
+                
+                    ]
+                }
+            ] 
         },
         {
             "menuTitle":"生活家电",
-            "comName":"life"
+            "comName":"life",
+            "proList":[
+                {
+                    "proTit":"热销大牌",
+                    "details":[
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1574762217409_app_wap_list.jpg",
+                            "proName":"烤箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1591012519327_imgApp_tmndir.jpg",
+                            "proName":"榨汁机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762253761_app_wap_list.jpg",
+                            "proName":"加湿器"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1574762217409_app_wap_list.jpg",
+                            "proName":"烤箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1591012519327_imgApp_tmndir.jpg",
+                            "proName":"榨汁机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762253761_app_wap_list.jpg",
+                            "proName":"加湿器"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1574762217409_app_wap_list.jpg",
+                            "proName":"烤箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1591012519327_imgApp_tmndir.jpg",
+                            "proName":"榨汁机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762253761_app_wap_list.jpg",
+                            "proName":"加湿器"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1574762217409_app_wap_list.jpg",
+                            "proName":"烤箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1591012519327_imgApp_tmndir.jpg",
+                            "proName":"榨汁机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762253761_app_wap_list.jpg",
+                            "proName":"加湿器"
+                        },
+                        {
+                            "proImg":"http://image5.suning.cn/uimg/asbs/ad/1574762217409_app_wap_list.jpg",
+                            "proName":"烤箱"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1591012519327_imgApp_tmndir.jpg",
+                            "proName":"榨汁机"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762253761_app_wap_list.jpg",
+                            "proName":"加湿器"
+                        }
+                    ]
+                },
+                {
+                    "proTit":"厨房家电",
+                    "details":[
+                        {
+                            "proImg":"http://image4.suning.cn/uimg/asbs/ad/1574912073870_imgApp_tmndir.jpg",
+                            "proName":"电饭煲"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1574762202227_app_wap_list.jpg",
+                            "proName":"电压力锅"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762401782_app_wap_list.jpg",
+                            "proName":"微波炉"
+                        },
+                        {
+                            "proImg":"http://image4.suning.cn/uimg/asbs/ad/1574912073870_imgApp_tmndir.jpg",
+                            "proName":"电饭煲"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1574762202227_app_wap_list.jpg",
+                            "proName":"电压力锅"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762401782_app_wap_list.jpg",
+                            "proName":"微波炉"
+                        },
+                        {
+                            "proImg":"http://image4.suning.cn/uimg/asbs/ad/1574912073870_imgApp_tmndir.jpg",
+                            "proName":"电饭煲"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1574762202227_app_wap_list.jpg",
+                            "proName":"电压力锅"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762401782_app_wap_list.jpg",
+                            "proName":"微波炉"
+                        },
+                        {
+                            "proImg":"http://image4.suning.cn/uimg/asbs/ad/1574912073870_imgApp_tmndir.jpg",
+                            "proName":"电饭煲"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1574762202227_app_wap_list.jpg",
+                            "proName":"电压力锅"
+                        },
+                        {
+                            "proImg":"http://image.suning.cn/uimg/asbs/ad/1574762401782_app_wap_list.jpg",
+                            "proName":"微波炉"
+                        }
+                    ]
+                },
+                {
+                    "proTit":"生活电器",
+                    "details":[
+                        {
+                            "proImg":"http://127.0.0.1:5500/src/images/classifyImg/operator.png",
+                            "proName":"运营商"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1598923429553_imgWap_tmndir.png",
+                            "proName":"手机卡"
+                        },
+                        {
+                            "proImg":"http://image2.suning.cn/uimg/asbs/ad/1598923963883_imgWap_tmndir.png",
+                            "proName":"宽带"
+                        },
+                        {
+                            "proImg":"http://image3.suning.cn/uimg/asbs/ad/1599639545824_imgWap_tmndir.png",
+                            "proName":"苏宁互联"
+                        },
+                        {
+                            "proImg":"http://image1.suning.cn/uimg/asbs/ad/1598924840170_imgWap_tmndir.png",
+                            "proName":"流量订购"
+                        }
+                    ]
+                }
+            ]    
         },
         {
             "menuTitle":"食品酒水",
-            "comName":"food"
+            "comName":"hotRecom"
         },
         {
             "menuTitle":"个人护理",
-            "comName":"personalCare"
+            "comName":"phone"
         },
         {
             "menuTitle":"美妆护肤",
-            "comName":"beautiful"
+            "comName":"household"
         },
         {
             "menuTitle":"奶粉尿裤",
-            "comName":"milkPowder"
+            "comName":"computer"
         },
         {
             "menuTitle":"苏宁国际",
-            "comName":"internation"
+            "comName":"cook"
         },
         {
-            "menuTitle":"珠宝首饰"
+            "menuTitle":"珠宝首饰",
+            "comName":"life"
         },
         {
-            "menuTitle":"品质男装"
+            "menuTitle":"品质男装",
+            "comName":"hotRecom"
         },
         {
-            "menuTitle":"品质男鞋"
+            "menuTitle":"品质男鞋",
+            "comName":"phone"
         },
         {
-            "menuTitle":"流行女装"
+            "menuTitle":"流行女装",
+            "comName":"household"
         },
         {
-            "menuTitle":"精品女鞋"
+            "menuTitle":"精品女鞋",
+            "comName":"computer"
         },
         {
-            "menuTitle":"运动户外"
+            "menuTitle":"运动户外",
+            "comName":"cook"
         },
         {
-            "menuTitle":"居家生活"
+            "menuTitle":"居家生活",
+            "comName":"life"
         }, 
         {
-            "menuTitle":"家居家纺"
+            "menuTitle":"家居家纺",
+            "comName":"hotRecom"
         },
         {
-            "menuTitle":"家装建材"
+            "menuTitle":"家装建材",
+            "comName":"phone"
         },
         {
-            "menuTitle":"厨具水具"
+            "menuTitle":"厨具水具",
+            "comName":"household"
         },
         {
-            "menuTitle":"二手优品"
+            "menuTitle":"二手优品",
+            "comName":"computer"
         },
         {
-            "menuTitle":"苏宁生鲜"
+            "menuTitle":"苏宁生鲜",
+            "comName":"cook"
         },
         {
-            "menuTitle":"智能数码"
+            "menuTitle":"智能数码",
+            "comName":"life"
         },
         {
-            "menuTitle":"钟表眼镜"
+            "menuTitle":"钟表眼镜",
+            "comName":"hotRecom"
         },
         {
-            "menuTitle":"汽车生活"
+            "menuTitle":"汽车生活",
+            "comName":"phone"
         },
         {
-            "menuTitle":"童装玩具"
+            "menuTitle":"童装玩具",
+            "comName":"household"
         },
         {
-            "menuTitle":"皮具箱包"
+            "menuTitle":"皮具箱包",
+            "comName":"computer"
         },
         {
-            "menuTitle":"内衣配饰"
+            "menuTitle":"内衣配饰",
+            "comName":"cook"
         },
         {
-            "menuTitle":"图书音像"
+            "menuTitle":"图书音像",
+            "comName":"life"
         },
         {
-            "menuTitle":"苏宁极物"
+            "menuTitle":"苏宁极物",
+            "comName":"hotRecom"
         },
         {
-            "menuTitle":"苏皮士"
+            "menuTitle":"苏皮士",
+            "comName":"phone"
         },
         {
-            "menuTitle":"礼品乐器"
+            "menuTitle":"礼品乐器",
+            "comName":"household"
         },
         {
-            "menuTitle":"艺术陶瓷"
+            "menuTitle":"艺术陶瓷",
+            "comName":"computer"
         },
         {
-            "menuTitle":"滋补保健"
+            "menuTitle":"滋补保健",
+            "comName":"cook"
         },
         {
-            "menuTitle":"器械计生"
+            "menuTitle":"器械计生",
+            "comName":"life"
         },
         {
-            "menuTitle":"中西药品"
+            "menuTitle":"中西药品",
+            "comName":"hotRecom"
         },
         {
-            "menuTitle":"苏宁金融"
+            "menuTitle":"苏宁金融",
+            "comName":"phone"
         },
         {
-            "menuTitle":"苏宁服务"
+            "menuTitle":"苏宁服务",
+            "comName":"household"
         },
         {
-            "menuTitle":"苏宁乐居"
+            "menuTitle":"苏宁乐居",
+            "comName":"computer"
         }
     ]
     
