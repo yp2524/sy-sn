@@ -18,8 +18,10 @@ VueRouter.prototype.push = function push(location) {
 
 export default new VueRouter({
   routes: [
+   
     {
       path: "/",
+      redirect:"/favorite",
       component: index,
       children: [
         {
