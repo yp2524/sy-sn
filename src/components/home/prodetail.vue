@@ -1,17 +1,17 @@
 <template>
   <div class="prodetail iconfont" ref="scrollDiv">
     <div class="top-menu" v-show="topshow">
-      <div>&#xe6ec;</div>
+      <div @click="goBack">&#xe6ec;</div>
       <div @click="clickScroll('proScroll')" :class="{activeTop:topMenuName=='product'}">商品</div>
       <div @click="clickScroll('evaScroll')" :class="{activeTop:topMenuName=='evalute'}">评价</div>
       <div @click="clickScroll('detailScroll')" :class="{activeTop:topMenuName=='detail'}">详情</div>
       <div @click="clickScroll('recommScroll')" :class="{activeTop:topMenuName=='recommend'}">推荐</div>
     </div>
     <div class="proimg" ref="proScroll">
-      <div class="nav-goback">
+      <div class="nav-goback" @click="goBack">
         <span>&#xe612;</span>
       </div>
-      <div class="proimg-lunbo">
+      <div class="proimg-lunbo" v-if="proList">
         <swiper ref="mySwiper" :options="swiperOptions" class="my-swiper">
           <swiper-slide class="lunbo-pic" v-for="(item,index) in proList.images" :key="'img'+index">
             <img :src="item" alt />
@@ -458,9 +458,8 @@ export default {
     axios
       .get(url)
       .then(function(response) {
-        let result = response.data.proMenu[0];
-        that.proList = result;
-        console.log(that.proList);
+        let result = response.data.proMenu[that.$route.query.id];
+        that.proList=result;
       })
       .catch(function(error) {
         console.log(error);
@@ -468,7 +467,8 @@ export default {
   },
   data() {
     return {
-      proList: {},
+      proList:{},
+      routeNum:this.$route.query.id,
       swiperOptions: {
         pagination: {
           el: ".swiper-pagination",
@@ -489,11 +489,14 @@ export default {
       packages:"packages",
       topshow:false,
       topMenuName:"product"
-    };
+    }
   },
-    mounted(){ 
+  beforeRouteLeave(to,from,next){
+    this.$destroy("prodetail");
+    next();
+  },
+  mounted(){ 
     this.$refs.scrollDiv.addEventListener('scroll', this.scrollEvent, true)
-   
   },
   beforeDestroy(){
     this.$refs.scrollDiv.addEventListener('scroll', this.scrollEvent, true)
@@ -510,6 +513,9 @@ export default {
     detailSpecifi(name){
       this.detailSpecifis=name;
     },
+    goBack(){
+      this.$router.go(-1);
+    },
     scrollEvent(){
       // console.log(this.$refs.scrollDiv.scrollTop) 
       if(this.$refs.scrollDiv.scrollTop>200){
@@ -518,16 +524,16 @@ export default {
         this.topshow=false;
       }
       // console.log(this.$refs.proScroll.getBoundingClientRect().top);
-      if(this.$refs.proScroll.getBoundingClientRect().top<50){
+      if(this.$refs.proScroll.getBoundingClientRect().top<60){
         this.topMenuName='product';
       }
-      if(this.$refs.evaScroll.getBoundingClientRect().top<50){
+      if(this.$refs.evaScroll.getBoundingClientRect().top<60){
         this.topMenuName='evalute';
       }
-          if(this.$refs.recommScroll.getBoundingClientRect().top<50){
+          if(this.$refs.recommScroll.getBoundingClientRect().top<60){
         this.topMenuName='recommend';
       }
-          if(this.$refs.detailScroll.getBoundingClientRect().top<50){
+          if(this.$refs.detailScroll.getBoundingClientRect().top<60){
         this.topMenuName='detail';
       }
     },
