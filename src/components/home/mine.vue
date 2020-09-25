@@ -156,13 +156,44 @@
                 <span>好货推荐</span>
                 <img src="../../images/favImg/egou10.png" alt="">
             </div>
+
+            <div class="like-content">
+                <div v-for="(item,index) in list" :key="index" class="like-item">
+                    <div class="imgBox">
+                        <img :src="item.images[0]" alt="">
+                    </div>
+                    <p class="proName">{{item.proName}}</p>
+                    <p class="shopName">{{item.shopName}}</p>
+                    <div class="pro-price">
+                        <span class="dollar">￥</span>
+                        <span class="price">{{item.price}}</span>
+                        <span class="evaluateNum">{{item.evaluateNum}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
-    
+    data(){
+        return {
+            list:[]
+        }
+    },
+    created(){
+        let that = this;
+        let url = "http://127.0.0.1:5500/src/data/prolist.json";
+        axios.get(url)
+        .then(function(response){
+            let result = response.data.proMenu;
+            console.log(result);
+            that.list = result;
+            console.log(that.list)
+        })
+   }
 }
 </script>
 <style scoped>
@@ -418,6 +449,68 @@ a{
     font-size: 14px;
     color: #222;
     font-weight: bold;
+}
+
+
+/* 好货推荐 */
+.like-content{
+    width: 100%;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.like-item{
+    width: 49%;
+    padding: 0px 5px;
+    background-color: white;
+    margin-top: 8px;
+    padding: 0 0 5px 0;
+}
+.imgBox{
+    width: 100%;
+}
+.imgBox img{
+    width: 100%;
+}
+.proName{
+    width: 100%;
+    height: 43px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 4px 0px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+.shopName{
+    display: inline-block;
+    font-size: 10px;
+    padding: 0 4px;
+    color: white;
+    background: #7A51FA;
+    border-radius: 5px;
+}
+.pro-price{
+    flex-shrink: 0;
+    padding: 5px 0 10px 0 ;
+}
+.dollar{
+    font-size: 14px;
+    color: #FF4422;
+}
+.price{
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF4422; 
+}
+.evaluateNum{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px;
 }
 
 </style>

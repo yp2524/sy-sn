@@ -12,11 +12,11 @@
           </h2>
           <!-- 手机号 -->
           <div class="phone">
-              <input type="text" placeholder="请输入手机号/用户名/邮箱" class="phone-number">
+              <input type="text" v-model="phoneNum" placeholder="请输入手机号/用户名/邮箱" class="phone-number">
           </div>
           <!-- password -->
           <div class="password">
-              <input type="password" placeholder="请输入密码" class="phone-number">
+              <input type="password" v-model="password" placeholder="请输入密码" class="phone-number">
               <div class="password-icon">
                   <img src="../../images/favImg/login2.png" @click="imgclick" v-show="icon" alt="">
                   <img src="../../images/favImg/login3.png" @click="imgclick" v-show="!icon" alt="">
@@ -25,7 +25,7 @@
           </div>
           <!-- 登录 -->
           <div class="register">
-              <a href="" class="register-p1">登录</a>
+              <a href="" class="register-p1" @click.prevent="enter">登录</a>
               <a href="" class="register-p2">验证码登录</a>
           </div>
       </div>
@@ -53,17 +53,37 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     data(){
         return{
-            icon:true
+            icon:true,
+            phoneNum:'',
+            password:''
         }
     },
     methods:{
         imgclick(){
-            this.icon = !this.icon
-        }
-    }
+            this.icon = !this.icon;        
+        },
+        // 登录
+        enter(){
+            var name = this.phoneNum;
+            var pass = this.password;
+
+            if(name==''|| name==null || name!==123456){
+                alert("请输入正确的用户名")
+            } else if(pass=='' || pass==null || pass!=111){
+                alert("请输入正确的密码");
+                return;
+            };
+            if(name==123456 && pass==111){
+                this.$router.push("/enter")
+            }
+            console.log(this.enter)
+                       
+        },        
+    },
 }
 </script>
 
