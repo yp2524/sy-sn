@@ -58,6 +58,8 @@ export default {
     data(){
         return{
             icon:true,
+            phoneNum:'',
+            password:''
         }
     },
     methods:{

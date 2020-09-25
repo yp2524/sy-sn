@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13573815",
+      "name": "√",
+      "font_class": "icon-test",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "15228216",
+      "name": "√",
+      "font_class": "icon-test1",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "11429301",
+      "name": "向左 箭头",
+      "font_class": "changyongtubiao-mianxing-",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "13416544",
+      "name": "左箭头",
+      "font_class": "jiantou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
       "icon_id": "1148163",
       "name": "问卷调查",
       "font_class": "poll-copy",
