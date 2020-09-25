@@ -1,11 +1,11 @@
 <template>
-  <div class="favorite-component">
+  <div class="favorite-component" ref="topScroll">
     <!-- 固定定位 -->
     <div class="fix-pic">
       <a href>
         <img src="../../images/favImg/fix.png" alt />
       </a>
-      <a href="#anchor" class="top">
+      <a v-show="subShow" href="#anchor" class="top">
         <img src="../../images/favImg/top.png" alt />
       </a>
     </div>
@@ -492,7 +492,8 @@ export default {
       s: "",
       sum_h: "",
       //v-for 循环
-      list: []
+      list: [],
+      subShow:false
     };
   },
   computed: {
@@ -500,13 +501,6 @@ export default {
       return this.$refs.mySwiper.$swiper;
     }
   },
-beforeRouteLeave(to,from,next){
-    if(to.name=="prodetail"){
-        to.meta.keepAlive=false;
-        console.log("1");
-    }
-    next();
-},
   methods: {
     countTime: function() {
       // 获取当前时间
@@ -532,11 +526,25 @@ beforeRouteLeave(to,from,next){
     },
     proDetaTo(index){
         this.$router.push({path:"/prodetail",query:{id:index}});
+    },
+    scrollEvent(){
+        let top=this.$refs.topScroll.scrollTop;
+        if(top>1000){
+            this.$emit('scrollEve',"houseyellow"),
+            this.subShow=true;
+        }else{
+            this.$emit('scrollEve',"favorite");
+            this.subShow=false;
+        }
     }
   },
 
   mounted() {
     this.countTime();
+    this.$refs.topScroll.addEventListener('scroll', this.scrollEvent, true)
+  },
+  beforeDestroy(){
+    this.$refs.topScroll.addEventListener('scroll', this.scrollEvent, true)
   },
   created() {
     let that = this;
@@ -545,7 +553,7 @@ beforeRouteLeave(to,from,next){
       let result = response.data.proMenu;
       // console.log(result);
       that.list = result;
-      console.log(that.list);
+    //   console.log(that.list);
     });
   }
 };
