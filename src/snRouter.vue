@@ -46,6 +46,10 @@ export default new VueRouter({
         {
           path: "/mine",
           component: login
+        },
+        {
+          path:'/enter',
+          component: mine
         }
       ]
     },

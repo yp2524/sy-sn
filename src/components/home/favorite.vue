@@ -1,7 +1,7 @@
 <template>
     <div class="favorite-component">
 
-        <!-- 固定定位 -->
+        <!-- 固定定位1 -->
         <div class="fix-pic">
             <a href="">
                 <img src="../../images/favImg/fix.png" alt="">
@@ -10,20 +10,28 @@
                 <img src="../../images/favImg/top.png" alt="">
             </a>
         </div>
+        <!-- 固定定位2 -->
+        <div class="fix-login" @click.prevent="fixlogin">
+            <a href="">
+                <img src="../../images/favImg/fix2.png" alt="">
+            </a>
+        </div>
+
         <!-- head -->
         <div class="fav-head">
             <!-- 锚点 -->
             <a href="" id="anchor"></a>
             <div class="fav-head-up">
-                <div class="fav-head-img">
+                <router-link to="/classify" class="fav-head-img">
                     <img src="../../images/favImg/head-classify.png" alt="">
-                </div>
+                </router-link>
+
                 <div class="fav-head-gif">
                     <img src="../../images/favImg/head-title.gif" alt="">
                 </div>
-                <div class="denglu">
-                    <img src="../../images/favImg/denglu.png" alt="">
-                </div>         
+                <router-link to="/mine" class="denglu">
+                     <img src="../../images/favImg/denglu.png" alt="">
+                </router-link>
             </div>
             <div class="fav-head-input">
                 <input type="search" placeholder="中秋悦礼 满199减60" class="search">
@@ -295,55 +303,100 @@
             </div>
 
             <!-- 推荐榜单 -->
-            <div class="recommendlist">
                 <div class="recommendlist-title">推荐榜单</div>
                 <div class="recommend-content">
-                    <!-- 第一行 -->
-                    <div class="recommend-row-one">
-                        <a href="https://m.suning.com" class="one-a">
-                            <img src="../../images/favImg/recommend5.jpg" alt="" class="recommend-row-pic">
-                            <div class="recommend-row-one-down">
-                                <div class="recommend-bg">
-                                    <img src="../../images/favImg/recommend-bg.png" alt="">
-                                </div>
-                                <div class="recommend-bg-title">
-                                    <p class="row-one-p1">人气榜</p>
-                                    <p class="row-one-p2">卖爆24.5万件</p>
-                                    <p class="row-one-p2">甄选营养纯奶榜</p>
-                                </div>
+                    <a href="" class="my-static">
+                        <div class="static-pic">
+                            <img src="../../images/favImg/recommend5.jpg" alt="">
+                        </div>
+                        <div class="static-down">
+                            <div class="static-bg">
+                                <img src="../../images/favImg/recommend-bg.png" alt="">
                             </div>
-                        </a>
-                        <div class="recommend-useless"></div>
-                        <a href="https://m.suning.com" class="one-a">
-                            <img src="../../images/favImg/recommend6.jpg" alt="" class="recommend-row-pic">
-                            <div class="recommend-row-one-down">
-                                <div class="recommend-bg">
-                                    <img src="../../images/favImg/recommend-bg.png" alt="">
-                                </div>
-                                <div class="recommend-bg-title">
-                                    <p class="row-one-p1">人气榜</p>
-                                    <p class="row-one-p2">卖爆24.5万件</p>
+                            <div class="recommend-bg-title static-ab">
+                                <p class="row-one-p1">人气榜</p>
+                                <div class="message-all">
                                     <p class="row-one-p2">休闲补脑坚果榜</p>
+                                    <p class="row-one-p2">卖爆24.5万件</p>
                                 </div>
                             </div>
-                        </a>
-                        <div class="recommend-useless"></div>
-                        <a href="https://m.suning.com" class="one-a">
-                            <img src="../../images/favImg/recommend8.jpg" alt="" class="recommend-row-pic">
-                            <div class="recommend-row-one-down">
+                        </div>
+                    </a>
+                    <div class="recommend-useless"></div>
+                    <a href="" class="">
+                        <swiper ref="mySwiper" :options="swiperOptionsCul" class="my-swiper">
+                            <swiper-slide class="slider">
+                                <div class="slider-pic">                                    
+                                    <img src="../../images/favImg/recommend6.jpg" alt="">                                
+                                </div>
+                                                            
+                                <div class="recommend-row-one-down">
+                                    <div class="recommend-bg">
+                                        <img src="../../images/favImg/cul.png" alt="">
+                                    </div>
+                                    <div class="recommend-bg-title">
+                                        <p class="row-one-p1">人气榜</p>
+                                        <div class="message-all">
+                                            <p class="row-one-p2">休闲补脑坚果榜</p>
+                                            <p class="row-one-p2">卖爆24.5万件</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </swiper-slide>
+                            <swiper-slide class="slider">                              
+                                <img src="../../images/favImg/recommend7.jpg" alt="">
+                                <div class="recommend-row-one-down">
                                 <div class="recommend-bg">
-                                    <img src="../../images/favImg/recommend-bg.png" alt="">
+                                    <img src="../../images/favImg/cul.png" alt="">
                                 </div>
                                 <div class="recommend-bg-title">
                                     <p class="row-one-p1">人气榜</p>
-                                    <p class="row-one-p2">卖爆17.2万件</p>
-                                    <p class="row-one-p2">零食糕点榜</p>
+                                    <div class="message-all">
+                                        <p class="row-one-p2">休闲补脑坚果榜</p>
+                                        <p class="row-one-p2">卖爆24.5万件</p>
+                                    </div>
+                                </div>
+                                </div>               
+                            </swiper-slide>
+                            <swiper-slide class="slider">               
+                                <img src="../../images/favImg/recommend8.jpg" alt="">
+                                <div class="recommend-row-one-down">
+                                <div class="recommend-bg">
+                                    <img src="../../images/favImg/cul.png" alt="">
+                                </div>
+                                <div class="recommend-bg-title">
+                                    <p class="row-one-p1">人气榜</p>
+                                    <div class="message-all">
+                                        <p class="row-one-p2">休闲补脑坚果榜</p>
+                                        <p class="row-one-p2">卖爆24.5万件</p>
+                                    </div>
+                                </div>
+                                </div>               
+                            </swiper-slide>
+                            <div class="swiper-pagination" slot="pagination"></div>
+                        </swiper>
+                    </a>                  
+  
+                    <div class="recommend-useless"></div>
+                    <a href="" class="my-static">
+                        <div class="static-pic">
+                            <img src="../../images/favImg/recommend4.jpg" alt="">
+                        </div>
+                        <div class="static-down">
+                            <div class="static-bg">
+                                <img src="../../images/favImg/recommend-bg.png" alt="">
+                            </div>
+                            <div class="recommend-bg-title static-ab">
+                                <p class="row-one-p1">人气榜</p>
+                                <div class="message-all">
+                                    <p class="row-one-p2">5g手机等你来拿</p>
+                                    <p class="row-one-p2">卖爆24.5万件</p>
                                 </div>
                             </div>
-                        </a>                        
-                    </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
+            
             <!-- 潮流留白 -->
             <div class="chaoliu-useless"></div>
             <!-- 潮流、生活、服务 -->
@@ -460,13 +513,22 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            // swiper
+            // swiper 横向
             swiperOptions: {
-            pagination: {
-                el: '.swiper-pagination',
+                pagination: {
+                    el: '.swiper-pagination',
             },
-            loop:true,
-            autoplay:true //自动轮播
+                loop:true,
+                autoplay:true //自动轮播
+            },
+            // swiper 竖向
+            swiperOptionsCul: {
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            // },
+                loop:true,
+                autoplay:true, //自动轮播
+                direction:'vertical'
             },
 
             // 抢购倒计时
@@ -484,6 +546,9 @@ export default {
       swiper() {
         return this.$refs.mySwiper.$swiper
       }, 
+    },
+    mounted(){
+       this.countTime()
     },
 
     methods:{
@@ -507,19 +572,20 @@ export default {
             // console.log(this.s);
             //递归每秒调用countTime方法，显示动态时间效果
             setTimeout(this.countTime, 1000);
+      },
+      fixlogin(){
+          this.$router.push("/mine")
       }
    },
 
-    mounted(){
-       this.countTime()
-   },
+  
     created(){
         let that = this;
         let url = "http://127.0.0.1:5500/src/data/prolist.json";
         axios.get(url)
         .then(function(response){
             let result = response.data.proMenu;
-            // console.log(result);
+            console.log(result);
             that.list = result;
             console.log(that.list)
         })
@@ -551,6 +617,15 @@ a{
 }
 .top img{
     margin-top: 20px;
+}
+/* 固定定位2 */
+.fix-login{
+    position: fixed;
+    bottom: 6.5%;
+    z-index: 2;
+}
+.fix-login a img{
+    width: 100%;
 }
 /* head */
 .fav-head{
@@ -843,76 +918,106 @@ a{
     text-overflow: ellipsis;
 }
 /* 推荐榜单 */
-.recommendlist{
-    background-color: #f2f2f2;
-}
 .recommendlist-title{
     font-size: 16px;
     font-weight: bold;
     padding: 5px 12px 10px;
 }
-.recommend-row-one{
+.recommend-content{
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: row;
-    padding: 0px 12px;
+    padding: 5px 12px;
 }
-.recommend-row-one a{
-    width: 33.33%;
-    padding: 10px 0px;
-    text-align: center;
+.recommend-content a{
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
     background-color: white;
 }
-.recommend-row-pic{
-    width: 75px;
-    height: 75px;
+.slider{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.slider-pic{
+    width: 100%;
+    background-color: white;
+}
+.slider img{
+    width: 100%;
+    height: 70px;
 }
 .recommend-row-one-down{
     width: 100%;
+    position: relative;
 }
 .recommend-bg{
     width: 100%;
-}
-.one-a{
-    position: relative;
-}
-.recommend-bg-title{
-    width: 100%;
-    text-align: center;
-    flex-shrink: 0;
-    position: absolute;
-    top: 83px;
-    display: flex;
-    flex-direction: column;
-}
-.recommend-bg-title p{
-    text-align: center;
+    flex-grow: 1;
 }
 .recommend-bg img{
     width: 100%;
+    flex-grow: 1;
+}
+.recommend-bg-title{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -16%; 
 }
 .row-one-p1{
-    position: absolute;
     display: inline-block;
     font-size: 10px;
     border-radius: 7px;
     color: #D9A87A;
     border: 1px solid #D9A87A;
     background: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     flex-shrink: 0;
 }
-.row-one-p2{
-    display: block;
+.message-all{
+    width: 100%;
+    margin: 0px auto;
+    flex-shrink: 0;
+}
+.message-all p{
+    width: 100%;
     color: white;
     font-size: 13px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    margin-top: 5px;
     flex-shrink: 0;
-
 }
+
+/* static */
+.my-static{
+    text-align: center;
+}
+
+.static-pic img{
+    width: 75px;
+    height: 70px;
+}
+.static-down{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.static-bg{
+    height: 100%;
+}
+.static-bg img{
+    width: 100%;
+    height: 50%;
+}
+.static-ab{
+    position: absolute;
+    top:-8%;
+}
+
 /* 推荐留白 */
 .recommend-useless{
     width: 2%;
@@ -945,11 +1050,9 @@ a{
 .like{
     margin-top: 20px;
     width: 100%;
-    height: 5%;
 }
 .like img{
     width: 100%;
-    height: 100%;
 }
 
 /* 猜你喜欢v-for循环 */
@@ -965,7 +1068,7 @@ a{
     width: 49%;
     padding: 0px 5px;
     background-color: white;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 .imgBox{
     width: 100%;
