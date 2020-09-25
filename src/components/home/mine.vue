@@ -1,5 +1,10 @@
 <template>
     <div class="my-egou">
+        <!-- fix -->
+        <div class="egou-fix-icon iconfont">
+            <a href="https://qss.suning.com/604fc.htm">&#xe60f;</a>
+        </div>
+        <!-- header -->
         <div class="header">
             <div class="header-title">
                 <div class="title">我的易购</div>
@@ -58,7 +63,7 @@
             
         <!-- vip图片 -->
         <div class="vip">
-            <a href="" class="vip-a">
+            <a href="https://supervip.suning.com/snprime-web/m/toIndex.do?wx_navbar_transparent=true&safp=f73ee1cf.mG0.yojH.10&safpn=10009" class="vip-a">
                 <div class="vip-left">
                     <img src="../../images/favImg/vip.png" alt="">
                     <span>【免费】 您有一张运费券带领取</span>
@@ -105,45 +110,51 @@
             </div>
 
             <!-- 必备工具 -->
-            <div class="my-order">
+            <div class="my-order must-tool">
                 <div class="my-order-title">
                     <span>必备工具</span>
                 </div>
     
-                <div class="my-order-status must iconfont">
+                <div class="my-order-status must">
                     <a href="">
-                        <p>&#xe700;</p>
-                        <span>红包</span>
+                        <img src="../../images/favImg/egou1.png" alt="">
+                        <p>红包</p>
                     </a>
                     <a href="">
-                        <p>&#xe6a8;</p>
-                        <span>店铺关注</span>
+                        <img src="../../images/favImg/egou2.png" alt="">
+                        <p>店铺关注</p>
                     </a>
                     <a href="">
-                        <p>&#xe611;</p>
-                        <span>足迹</span>
+                        <img src="../../images/favImg/egou3.png" alt="">
+                        <p>足迹</p>
                     </a>
                     <a href="">
-                        <p>&#xe60a;</p>
-                        <span>客户服务</span>
+                         <img src="../../images/favImg/egou6.png" alt="">
+                        <p>客户服务</p>
                     </a>
                     <a href="">
-                        <p>&#xe643;</p>
-                        <span>必抢清单</span>
+                         <img src="../../images/favImg/egou4.png" alt="">
+                        <p>必抢清单</p>
                     </a>
                     <a href="">
-                        <p>&#xe611;</p>
-                        <span>拼购</span>
+                         <img src="../../images/favImg/egou5.png" alt="">
+                        <p>拼购</p>
                     </a>
                     <a href="">
-                        <p>&#xe60a;</p>
-                        <span>校园VIP</span>
+                         <img src="../../images/favImg/egou7.png" alt="">
+                        <p>校园VIP</p>
                     </a>
                     <a href="">
-                        <p>&#xe643;</p>
-                        <span>我的试用</span>
+                         <img src="../../images/favImg/egou8.png" alt="">
+                        <p>我的试用</p>
                     </a>
                 </div>
+            </div>
+            <!-- 好货推荐logo -->
+            <div class="logo">
+                <img src="../../images/favImg/egou9.png" alt="">
+                <span>好货推荐</span>
+                <img src="../../images/favImg/egou10.png" alt="">
             </div>
         </div>
     </div>
@@ -158,10 +169,33 @@ export default {
 .my-egou{
     width: 100%;
     height: 93%;
+    position: relative;
 }
 a{
     text-decoration: none;
 }
+/* fix */
+.egou-fix-icon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #d3d2d2;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    right: 18px;
+    top: 563px;
+}
+.egou-fix-icon a{
+    font-size: 20px;
+    vertical-align: middle;
+    color: black;
+}
+
+
+
+/* header */
 .header{
     background-color: #FFDB47;
 }
@@ -271,8 +305,12 @@ a{
     margin-top: -15px;
 }
 .vip-left{
+    width: 70%;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .vip-left img{
     width: 45px;
@@ -284,6 +322,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 .vip-right{
     font-size: 12px;
@@ -294,6 +333,7 @@ a{
 }
 .vip-right span{
     margin-left: 5px;
+    flex-shrink: 0;
 }
 
 
@@ -331,7 +371,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    padding: 15px 12px;
+    padding: 15px 10px;
 }
 .my-order-status a p{
     font-size: 25px;
@@ -343,13 +383,41 @@ a{
     color: #222;
 }
 /* 必抢清单 */
+.must-tool{
+    margin-top: 10px;
+}
 .must{
+    padding: 15px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .must a{
     width: 25%;
+    margin-top: 10px;
+}
+.must a img{
+    width: 24px;
+    height: 24px;
+}
+.must a p{
+    font-size: 12px;
+    color: #222;
+}
+/* 好货推荐logo */
+.logo{
+    text-align: center;
+    margin: 8px auto;
+}
+.logo img{
+    width: 1.02rem;
+    height: 0.24rem;
+}
+.logo span {
+    font-size: 14px;
+    color: #222;
+    font-weight: bold;
 }
 
 </style>

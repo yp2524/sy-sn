@@ -6,6 +6,7 @@
   "description": "",
   "glyphs": [
     {
+<<<<<<< HEAD
       "icon_id": "13573815",
       "name": "√",
       "font_class": "icon-test",
@@ -34,6 +35,8 @@
       "unicode_decimal": 58898
     },
     {
+=======
+>>>>>>> 4f1fe096bf6c966e2f5666771fa355253cc96857
       "icon_id": "1148163",
       "name": "问卷调查",
       "font_class": "poll-copy",
