@@ -6,6 +6,7 @@ import mine from "./components/home/mine.vue";
 import rankinglist from "./components/home/ranklist.vue";
 import roblist from "./components/home/roblisting.vue";
 import shopcart from "./components/home/shopcart.vue";
+import prodetail from "./components/home/prodetail.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
@@ -49,6 +50,10 @@ export default new VueRouter({
     {
       path: "/rankinglist",
       component: rankinglist
+    },
+    {
+      path:"/prodetail",
+      component:prodetail
     }
   ]
 });

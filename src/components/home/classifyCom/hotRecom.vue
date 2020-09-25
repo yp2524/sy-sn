@@ -24,7 +24,6 @@ export default {
     axios
       .get(url)
       .then(function(response) {
-        console.log(that.num);
         let result = response.data.proMenu[that.num].proList;
         that.proList = result;
       })

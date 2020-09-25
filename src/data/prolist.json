@@ -11,7 +11,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/tea4.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/tea5.jpg"
             ],
-            "price":"19.90",
+            "price":["19",".90" ],
             "evalute":"送的小茶包真心不好喝，清气太重了，大包还没来得及喝，随后追评",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/teaevaImg.jpg",
             "detailImg":[
@@ -35,7 +35,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/sweet4.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/sweet5.jpg"
             ],
-            "price":"32.80",
+            "price":["32",".80" ],
             "evalute":"好吃还行。。。。。。",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/sweetEva.jpg",
             "detailImg":[
@@ -59,7 +59,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/jujube4.png",
                 "http://127.0.0.1:5500/src/images/productImg/jujube5.png"
             ],
-            "price":"9.90",
+            "price":["9",".90" ],
             "evalute":"味道不错，香脆可口，满意，好评。",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/jujubeEva.jpg",
             "detailImg":[
@@ -83,7 +83,7 @@
                 "http://127.0.0.1:5500/src/images/productImg/apple4.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/apple5.jpg"
             ],
-            "price":"26.80",
+            "price":["26",".80" ],
             "evalute":"",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/appleEva.jpg",
             "detailImg":[

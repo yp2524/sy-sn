@@ -38,7 +38,7 @@ export default {
   },
   mounted(){ 
     this.$refs.scrollDiv.addEventListener('scroll', this.scrollEvent, true)
-       
+   
   },
   beforeDestroy(){
     this.$refs.scrollDiv.addEventListener('scroll', this.scrollEvent, true)
