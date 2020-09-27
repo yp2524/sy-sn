@@ -78,7 +78,6 @@ export default {
   },
   methods: {
     changeCom(name) {
-        console.log(this.$options.name);
       this.comName = name;
       if(name=='rankinglist'||name=='roblist'){
 

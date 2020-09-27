@@ -8,10 +8,11 @@
 
 <script>
 import router from "./snRouter.vue";
-
+import store from "./components/store.js"
 export default {
   name: 'App',
-  router:router
+  router:router,
+  store:store
 }
 </script>
 

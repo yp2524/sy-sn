@@ -4,6 +4,9 @@
             "shopName":"醇香茶叶旗舰店",
             "proName":"醇香【买五送一】福鼎白茶白牡丹茶饼 高三老白茶小饼 100g",
             "introduce":"方便携带 高山白牡丹饼陈年",
+            "proNum":1,
+            "totalPrice":19.90,
+            "isHaveSel":true,
             "images":[
                 "http://127.0.0.1:5500/src/images/productImg/tea1.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/tea2.jpg",
@@ -28,6 +31,9 @@
             "shopName":"义玖食品专营店",
             "proName":"老上海梨膏糖润喉糖500克约166粒百草手工润喉糖清凉润嗓子咽喉含片砂板糖薄荷味糖果零食",
             "introduce":"老上海梨膏糖500克手工润喉糖清凉润嗓子无添加剂薄荷味糖果",
+            "proNum":1,
+            "totalPrice":32.80,
+            "isHaveSel":true,
             "images":[
                 "http://127.0.0.1:5500/src/images/productImg/sweet1.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/sweet2.jpg",
@@ -51,6 +57,9 @@
         {
             "shopName":"卿卿雨红枣官方旗舰店",
             "proName":"卿卿雨 250克/袋 香酥脆枣",
+            "proNum":1,
+            "totalPrice":9.90,
+            "isHaveSel":true,
             "introduce":"香酥脆甜，今年新货，不好吃全额退你钱",
             "images":[
                 "http://127.0.0.1:5500/src/images/productImg/jujube1.jpg",
@@ -62,6 +71,7 @@
             "price":["9",".90" ],
             "evalute":"味道不错，香脆可口，满意，好评。",
             "evaluteImg":"http://127.0.0.1:5500/src/images/productImg/jujubeEva.jpg",
+            
             "detailImg":[
                 "https://image.suning.cn/uimg/sop/commodity/133758770013526627461719_x.jpg",
                 "https://image.suning.cn/uimg/sop/commodity/109632951611010687216852_x.jpg",
@@ -76,6 +86,10 @@
             "shopName":"山丘二十里生鲜旗舰店",
             "proName":"5斤山东烟台红富士苹果新鲜水果甜脆水分足蓬莱红富士85mm9粒",
             "introduce":"5斤钜惠装 新鲜苹果 甜脆水分充足 不打蜡不催熟",
+            
+            "proNum":1,
+            "totalPrice":26.80,
+            "isHaveSel":true,
             "images":[
                 "http://127.0.0.1:5500/src/images/productImg/apple1.jpg",
                 "http://127.0.0.1:5500/src/images/productImg/apple2.jpg",

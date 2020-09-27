@@ -442,7 +442,7 @@
         <div class="buy">
           <span>立即购买</span>
         </div>
-        <div class="add-cart">
+        <div class="add-cart" @click="addCart(proList)">
           <span>加入购物车</span>
         </div>
       </div>
@@ -543,6 +543,10 @@ export default {
          top:page-50,
          behavior:'smooth'
        })
+    },
+    addCart(proList){
+      console.log(proList);
+        this.$store.commit("addCart",proList)
     }
   }
 };
@@ -1087,6 +1091,7 @@ body,
 }
 .prodetail-bottom > .buy-add > .add-cart {
   background-color: #ff6600;
+  color: #fff;
 }
 
 .eva-title {
