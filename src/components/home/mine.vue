@@ -158,17 +158,17 @@
             </div>
 
             <div class="like-content">
-                <div v-for="(item,index) in list" :key="index" class="like-item">
-                    <div class="imgBox">
-                        <img :src="item.images[0]" alt="">
-                    </div>
-                    <p class="proName">{{item.proName}}</p>
-                    <p class="shopName">{{item.shopName}}</p>
-                    <div class="pro-price">
-                        <span class="dollar">￥</span>
-                        <span class="price">{{item.price}}</span>
-                        <span class="evaluateNum">{{item.evaluateNum}}</span>
-                    </div>
+                <div v-for="(item,index) in list" :key="index" class="like-item" @click="proDetaTo(index)">
+                <div class="imgBox">
+                    <img :src="item.images[0]" alt />
+                </div>
+                <p class="proName">{{item.proName}}</p>
+                <p class="shopName">{{item.shopName}}</p>
+                <div class="pro-price">
+                    <span class="dollar">￥</span>
+                    <span class="price">{{item.price[0]}}{{item.price[1]}}</span>
+                    <span class="evaluateNum">{{item.evaluateNum}}</span>
+                </div>
                 </div>
             </div>
         </div>
@@ -189,10 +189,16 @@ export default {
         axios.get(url)
         .then(function(response){
             let result = response.data.proMenu;
-            console.log(result);
+            // console.log(result);
             that.list = result;
-            console.log(that.list)
+            // console.log(that.list)
         })
+   },
+
+   methods:{
+       proDetaTo(index){
+           this.$router.push({path:"/prodetail",query:{id:index}})
+       }
    }
 }
 </script>

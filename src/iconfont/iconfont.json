@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "9390591",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
       "icon_id": "13573815",
       "name": "√",
       "font_class": "icon-test",

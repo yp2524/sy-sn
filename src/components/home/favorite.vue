@@ -9,20 +9,25 @@
         <img src="../../images/favImg/top.png" alt />
       </a>
     </div>
+    
+    <router-link :to="skip" class="fix-login">
+      <img src="../../images/favImg/fix2.png" alt="">
+    </router-link>
+   
     <!-- head -->
     <div class="fav-head">
       <!-- 锚点 -->
       <a href id="anchor"></a>
       <div class="fav-head-up">
-        <div class="fav-head-img">
-          <img src="../../images/favImg/head-classify.png" alt />
-        </div>
+        <router-link to="/classify" class="fav-head-img">
+            <img src="../../images/favImg/head-classify.png" alt />        
+        </router-link>
         <div class="fav-head-gif">
           <img src="../../images/favImg/head-title.gif" alt />
         </div>
-        <div class="denglu">
-          <img src="../../images/favImg/denglu.png" alt />
-        </div>
+        <router-link to="/mine" class="denglu">
+            <img src="../../images/favImg/denglu.png" alt />     
+        </router-link>
       </div>
       <div class="fav-head-input">
         <input type="search" placeholder="中秋悦礼 满199减60" class="search" />
@@ -311,55 +316,104 @@
       </div>
 
       <!-- 推荐榜单 -->
-      <div class="recommendlist">
-        <div class="recommendlist-title">推荐榜单</div>
-        <div class="recommend-content">
+      <div class="recommendlist-title">推荐榜单</div>
           <!-- 第一行 -->
-          <div class="recommend-row-one">
-            <a href="https://m.suning.com" class="one-a">
-              <img src="../../images/favImg/recommend5.jpg" alt class="recommend-row-pic" />
-              <div class="recommend-row-one-down">
-                <div class="recommend-bg">
-                  <img src="../../images/favImg/recommend-bg.png" alt />
+          <div class="recommend-content">
+             <a href="">
+                <div  class="mySwiper-box">
+                  <div class="mySwiper-cul">
+                    <div class="mySwiper-cul-up upImg">
+                      <img src="../../images/favImg/recommend5.jpg" alt />
+                    </div>
+                    <div class="mySwiper-cul-down">
+                      <div>
+                        <img src="../../images/favImg/recommend-bg.png" alt="">
+                      </div>
+                      <div class="mySwiper-cul-down-title">
+                        <p class="title-p1">人气榜</p>
+                        <p class="title-p2">中端实用手机榜</p>
+                        <p class="title-p2">卖爆3.4万件</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination" slot="pagination"></div>
                 </div>
-                <div class="recommend-bg-title">
-                  <p class="row-one-p1">人气榜</p>
-                  <p class="row-one-p2">卖爆24.5万件</p>
-                  <p class="row-one-p2">甄选营养纯奶榜</p>
-                </div>
-              </div>
             </a>
-            <div class="recommend-useless"></div>
-            <a href="https://m.suning.com" class="one-a">
-              <img src="../../images/favImg/recommend6.jpg" alt class="recommend-row-pic" />
-              <div class="recommend-row-one-down">
-                <div class="recommend-bg">
-                  <img src="../../images/favImg/recommend-bg.png" alt />
-                </div>
-                <div class="recommend-bg-title">
-                  <p class="row-one-p1">人气榜</p>
-                  <p class="row-one-p2">卖爆24.5万件</p>
-                  <p class="row-one-p2">休闲补脑坚果榜</p>
-                </div>
-              </div>
+            <div class="wh"></div>
+            <a href="">
+               <swiper ref="mySwiper" :options="swiperOptionsVer" class="mySwiper-box">
+                  <swiper-slide class="mySwiper-cul">
+                    <div class="mySwiper-cul-up">
+                      <img src="../../images/favImg/recommend6.jpg" alt />
+                    </div>
+                    <div class="mySwiper-cul-down">
+                      <div>
+                        <img src="../../images/favImg/cul.png" alt="">
+                      </div>
+                      <div class="mySwiper-cul-down-title">
+                        <p class="title-p1">人气榜</p>
+                        <p class="title-p2">中端实用手机榜</p>
+                        <p class="title-p2">卖爆3.4万件</p>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                   <swiper-slide class="mySwiper-cul">
+                    <div class="mySwiper-cul-up">
+                      <img src="../../images/favImg/recommend7.jpg" alt />
+                    </div>
+                    <div class="mySwiper-cul-down">
+                      <div>
+                        <img src="../../images/favImg/cul.png" alt="">
+                      </div>
+                      <div class="mySwiper-cul-down-title">
+                        <p class="title-p1">人气榜</p>
+                        <p class="title-p2">中端实用手机榜</p>
+                        <p class="title-p2">卖爆3.4万件</p>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                   <swiper-slide class="mySwiper-cul">
+                    <div class="mySwiper-cul-up">
+                      <img src="../../images/favImg/recommend8.jpg" alt />
+                    </div>
+                    <div class="mySwiper-cul-down">
+                      <div>
+                        <img src="../../images/favImg/cul.png" alt="">
+                      </div>
+                      <div class="mySwiper-cul-down-title">
+                        <p class="title-p1">人气榜</p>
+                        <p class="title-p2">中端实用手机榜</p>
+                        <p class="title-p2">卖爆3.4万件</p>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <div class="swiper-pagination" slot="pagination"></div>
+              </swiper>
             </a>
-            <div class="recommend-useless"></div>
-            <a href="https://m.suning.com" class="one-a">
-              <img src="../../images/favImg/recommend8.jpg" alt class="recommend-row-pic" />
-              <div class="recommend-row-one-down">
-                <div class="recommend-bg">
-                  <img src="../../images/favImg/recommend-bg.png" alt />
+            <div class="wh"></div>
+            <a href="">
+               <div  class="mySwiper-box">
+                  <div class="mySwiper-cul">
+                    <div class="mySwiper-cul-up upImg">
+                      <img src="../../images/favImg/recommend1.jpg" alt />
+                    </div>
+                    <div class="mySwiper-cul-down">
+                      <div>
+                        <img src="../../images/favImg/recommend-bg.png" alt="">
+                      </div>
+                      <div class="mySwiper-cul-down-title">
+                        <p class="title-p1">人气榜</p>
+                        <p class="title-p2">中端实用手机榜</p>
+                        <p class="title-p2">卖爆3.4万件</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination" slot="pagination"></div>
                 </div>
-                <div class="recommend-bg-title">
-                  <p class="row-one-p1">人气榜</p>
-                  <p class="row-one-p2">卖爆17.2万件</p>
-                  <p class="row-one-p2">零食糕点榜</p>
-                </div>
-              </div>
             </a>
           </div>
-        </div>
-      </div>
+    
+    
       <!-- 潮流留白 -->
       <div class="chaoliu-useless"></div>
       <!-- 潮流、生活、服务 -->
@@ -485,6 +539,12 @@ export default {
         autoplay: true //自动轮播
       },
 
+       swiperOptionsVer: {
+        loop: true,
+        autoplay: true, //自动轮播
+        // direction: 'vertical',
+        direction: 'vertical'
+      },
       // 抢购倒计时
       d: "",
       h: "",
@@ -493,7 +553,9 @@ export default {
       sum_h: "",
       //v-for 循环
       list: [],
-      subShow:false
+      subShow:false,
+      // skip
+      skip:"/mine"
     };
   },
   computed: {
@@ -536,7 +598,8 @@ export default {
             this.$emit('scrollEve',"favorite");
             this.subShow=false;
         }
-    }
+    },
+
   },
 
   mounted() {
@@ -583,6 +646,13 @@ a {
 }
 .top img {
   margin-top: 20px;
+}
+.fix-login{
+  position: fixed;
+  bottom: 42px;
+}
+.fix-login img{
+  width: 100%;
 }
 /* head */
 .fav-head {
@@ -875,80 +945,80 @@ a {
   text-overflow: ellipsis;
 }
 /* 推荐榜单 */
-.recommendlist {
-  background-color: #f2f2f2;
-}
+
 .recommendlist-title {
   font-size: 16px;
   font-weight: bold;
   padding: 5px 12px 10px;
 }
-.recommend-row-one {
+.recommend-content{
+  width: 100%;
+  height: 24%;
+  padding: 0 12px;
   display: flex;
   flex-direction: row;
-  padding: 0px 12px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  flex-shrink: 0;
 }
-.recommend-row-one a {
-  width: 33.33%;
-  padding: 10px 0px;
+.recommend-content a{
+  display: block;
+  width: 33.3%;
+  height: 100%;
   text-align: center;
-  background-color: white;
+  margin-top: 5px;
 }
-.recommend-row-pic {
+.mySwiper-box{
+  width: 100%;
+  height: 100%;
+}
+.mySwiper-cul-up{
+  width: 100%;
+  padding: 5px;
+}
+.mySwiper-cul-up{
+  width: 100%;
+  background: white;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.mySwiper-cul-up img{
   width: 75px;
   height: 75px;
 }
-.recommend-row-one-down {
+.mySwiper-cul-down{
   width: 100%;
-}
-.recommend-bg {
-  width: 100%;
-}
-.one-a {
   position: relative;
 }
-.recommend-bg-title {
-  width: 100%;
-  text-align: center;
-  flex-shrink: 0;
-  position: absolute;
-  top: 83px;
-  display: flex;
-  flex-direction: column;
-}
-.recommend-bg-title p {
-  text-align: center;
-}
-.recommend-bg img {
+.mySwiper-cul-down div img{
   width: 100%;
 }
-.row-one-p1 {
+.mySwiper-cul-down-title{
+  width: 100%;
   position: absolute;
-  display: inline-block;
+  top: -12px;
+}
+.title-p1{
   font-size: 10px;
-  border-radius: 7px;
-  color: #d9a87a;
+  display: inline-block;
   border: 1px solid #d9a87a;
+  color: #d9a87a;
   background: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+  border-radius: 8px;
+  padding: 0 3px;
 }
-.row-one-p2 {
-  display: block;
+.title-p2{
+  font-size: 12px;
   color: white;
-  font-size: 13px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
 }
-/* 推荐留白 */
-.recommend-useless {
-  width: 2%;
+
+.wh{
+  width: 1%;
   height: 100%;
-}
+  background: #f2f2f2;
+} 
+
 /* 潮流留白 */
 .chaoliu-useless {
   width: 100%;
