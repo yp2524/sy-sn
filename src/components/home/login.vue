@@ -16,7 +16,7 @@
           </div>
           <!-- password -->
           <div class="password">
-              <input type="password" v-model="password" placeholder="请输入密码" class="phone-number">
+              <input :type="pwdType" v-model="password" placeholder="请输入密码" class="phone-number">
               <div class="password-icon">
                   <img src="../../images/favImg/login2.png" @click="imgclick" v-show="icon" alt="">
                   <img src="../../images/favImg/login3.png" @click="imgclick" v-show="!icon" alt="">
@@ -59,19 +59,21 @@ export default {
         return{
             icon:true,
             phoneNum:'',
-            password:''
+            password:'',
+            pwdType:'password'
         }
     },
     methods:{
         imgclick(){
-            this.icon = !this.icon;        
+            this.icon = !this.icon;
+            this.pwdType = this.pwdType == 'password'?'text':'password';
         },
         // 登录
         enter(){
             var name = this.phoneNum;
             var pass = this.password;
 
-            if(name==''|| name==null || name!==123456){
+            if(name==''|| name==null){
                 alert("请输入正确的用户名")
             } else if(pass=='' || pass==null || pass!=111){
                 alert("请输入正确的密码");

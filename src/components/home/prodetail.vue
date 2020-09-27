@@ -89,7 +89,8 @@
       <div>100g 1件</div>
       <span>&#xe631;</span>
     </div>
-    <div class="address">
+
+    <div class="address" @click="areaClick">
       <div>送至</div>
       <div>
         <span>&#xe630;</span>
@@ -97,6 +98,7 @@
         <span>&#xe631;</span>
       </div>
     </div>
+
     <div class="payment">
       <div>付款</div>
       <div>
@@ -433,6 +435,24 @@
       </p>
     </div>
 
+    <div class="look">
+      <span>看了又看</span>
+    </div>
+    <div class="like-content">
+      <div v-for="(item,index) in list" :key="index" class="like-item" @click="proDetaTo(index)">
+        <div class="imgBox">
+          <img :src="item.images[0]" alt />
+        </div>
+        <p class="proName">{{item.proName}}</p>
+        <p class="shopName">{{item.shopName}}</p>
+        <div class="pro-price">
+          <span class="dollar">￥</span>
+          <span class="price">{{item.price[0]}}{{item.price[1]}}</span>
+          <span class="evaluateNum">{{item.evaluateNum}}</span>
+        </div>
+      </div>
+    </div>
+
 
     <div class="prodetail-bottom">
       <img src="../../images/productImg/sn-custom.png" alt />
@@ -444,6 +464,27 @@
         </div>
         <div class="add-cart" @click="addCart(proList)">
           <span>加入购物车</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区域 -->
+    <div class="mask" v-if="mask">
+      <div class="area">
+        <div class="nav">
+          <span>地址选择</span>
+          <span @click="close" class="nav-icon">&#xe615;</span>
+        </div>
+        <div area-option>
+          <select v-model="selectProvince" @change="provinceChange" class="sele">
+            <option v-for="(item,index) in provinceList" :value="item" :key="index">{{item.name}}</option>
+          </select>
+          <select v-model="selectCity" @change="cityChange" class="sele">
+            <option v-for="(item,index) in cityList" :value="item" :key="index">{{item.name}}</option>
+          </select>
+          <select v-model="selectArea" class="sele">
+            <option v-for="(item,index) in areaList" :value="item" :key="index">{{item}}</option>
+          </select>
         </div>
       </div>
     </div>
@@ -460,6 +501,22 @@ export default {
       .then(function(response) {
         let result = response.data.proMenu[that.$route.query.id];
         that.proList=result;
+        
+        let lookResult = response.data.proMenu;
+        that.list = lookResult;//看了又看数据
+        // console.log(that.list)
+
+        let provinceList = response.data.area;
+          that.provinceList = provinceList;
+          that.cityList = that.provinceList[0].cityList;
+          that.areaList =  that.provinceList[0].cityList[0].areaList;
+
+          that.selectProvince = that.provinceList[0];
+          that.selectCity = that.provinceList[0].cityList[0]
+          that.selectArea = that.provinceList[0].cityList[0].areaList[0]
+
+          console.log(that.provinceList[0].cityList)
+          console.log(that.cityList);
       })
       .catch(function(error) {
         console.log(error);
@@ -467,7 +524,17 @@ export default {
   },
   data() {
     return {
+      list:[],//看了又看
+      provinceList:[],//区域
+      cityList:[],
+      areaList:[],
+
+      selectProvince:[],
+      selectCity:[],
+      selectArea:[],
+
       proList:{},
+      mask:false,
       routeNum:this.$route.query.id,
       swiperOptions: {
         pagination: {
@@ -547,6 +614,29 @@ export default {
     addCart(proList){
       console.log(proList);
         this.$store.commit("addCart",proList)
+    },
+    // 看了又看页面详情跳转
+    proDetaTo(index){
+      this.$router.push({path:"/prodetail",query:{id:index}});
+    },
+    areaClick(){
+      this.mask=true
+    },
+    close(){
+      this.mask=false
+    },
+
+    // 区域选择
+    provinceChange(){
+      this.cityList = this.selectProvince.cityList;
+      this.selectCity = this.cityList[0];
+
+      this.areaList = this.selectCity.areaList;
+      this.selectArea = this.areaList[0];
+    },
+    cityChange(){
+      this.areaList = this.selectCity.areaList;
+      this.selectArea = this.areaList[0];
     }
   }
 };
@@ -559,6 +649,10 @@ body,
   background-color: #f2f2f2;
   overflow: auto;
   padding-bottom: 14%;
+}
+a{
+  text-decoration: none;
+  color: #222;
 }
 .top-menu .activeTop{
   position: relative;
@@ -1450,4 +1544,135 @@ body,
   color: #999;
   font-size: 12px;
 }
+/* 看了又看 */
+.look{
+  text-align: center;
+  padding: 12px 0px;
+  position: relative;
+}
+.look span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #222;
+}
+.look span::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25%;
+  left: 52px;
+  top: 20px;
+  border-top: 2px solid #ddd;
+}
+.look span::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25%;
+  right: 53px;
+  top: 20px;
+  border-top: 2px solid #ddd;
+}
+
+/* 看了又看 */
+.like-content {
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.like-item {
+  width: 49%;
+  padding: 0px 5px;
+  background-color: white;
+  margin-top: 8px;
+}
+.imgBox {
+  width: 100%;
+}
+.imgBox img {
+  width: 100%;
+}
+.proName {
+  width: 100%;
+  height: 43px;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 4px 0px 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.shopName {
+  display: inline-block;
+  font-size: 10px;
+  padding: 0 4px;
+  color: white;
+  background: #7a51fa;
+  border-radius: 5px;
+}
+.pro-price {
+  flex-shrink: 0;
+  padding: 5px 0 10px 0;
+}
+.dollar {
+  font-size: 14px;
+  color: #ff4422;
+}
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4422;
+}
+.evaluateNum {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+}
+
+
+/* 区域 */
+.mask{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.area{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 60%;
+  background-color: #fff;
+  border-radius: 5%;
+  text-align: center;
+}
+.nav{
+  padding: 10px 0px;
+  border-bottom: 1px solid #eee;
+}
+.nav-icon{
+  float: right;
+  padding: 0 10px 0 0;
+  font-size: 14px;
+  color: #999;
+}
+.sele{
+  font-size: 14px;
+  padding: 10px;
+  width: 30%;
+  height: 10%;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
 </style>
