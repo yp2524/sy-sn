@@ -501,7 +501,7 @@ export default {
       .then(function(response) {
         let result = response.data.proMenu[that.$route.query.id];
         that.proList=result;
-        
+        that.proLists=response.data.proMenu;
         let lookResult = response.data.proMenu;
         that.list = lookResult;//看了又看数据
         // console.log(that.list)
@@ -533,6 +533,7 @@ export default {
       selectCity:[],
       selectArea:[],
 
+      proLists:[],
       proList:{},
       mask:false,
       routeNum:this.$route.query.id,
@@ -612,12 +613,11 @@ export default {
        })
     },
     addCart(proList){
-      console.log(proList);
         this.$store.commit("addCart",proList)
     },
     // 看了又看页面详情跳转
     proDetaTo(index){
-      this.$router.push({path:"/prodetail",query:{id:index}});
+      this.proList=this.proLists[index];
     },
     areaClick(){
       this.mask=true
@@ -1672,6 +1672,9 @@ a{
   outline: none;
   border: none;
   border-bottom: 1px solid #f2f2f2;
+}
+.pro-price{
+  padding-left: 3%;
 }
 
 
