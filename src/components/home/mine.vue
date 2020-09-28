@@ -9,7 +9,7 @@
             <div class="header-title">
                 <div class="title">我的易购</div>
                 <div class="header-icon iconfont">
-                    <a href="">&#xe705;</a>
+                    <a href="" @click.prevent>&#xe705;</a>
                 </div>
             </div>
             <div class="information">          
@@ -448,13 +448,15 @@ a{
     margin: 8px auto;
 }
 .logo img{
-    width: 1.02rem;
-    height: 0.24rem;
+    width: 1.5rem;
+    height: 0.4rem;
+    vertical-align: middle;
 }
 .logo span {
     font-size: 14px;
     color: #222;
     font-weight: bold;
+    margin: 0 12px;
 }
 
 
@@ -466,6 +468,7 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 40px;
 }
 .like-item{
     width: 49%;
