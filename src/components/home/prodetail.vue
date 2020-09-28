@@ -94,7 +94,7 @@
       <div>送至</div>
       <div>
         <span>&#xe630;</span>
-        <p>江苏 苏州 虎丘区 全区</p>
+        <p>{{selectProvince.name}} {{selectCity.name}} {{selectArea}}</p>
         <span>&#xe631;</span>
       </div>
     </div>
@@ -470,23 +470,25 @@
 
     <!-- 区域 -->
     <div class="mask" v-if="mask">
-      <div class="area">
-        <div class="nav">
-          <span>地址选择</span>
-          <span @click="close" class="nav-icon">&#xe615;</span>
+      <transition>
+        <div class="area">
+          <div class="nav">
+            <span>地址选择</span>
+            <span @click="close" class="nav-icon">&#xe615;</span>
+          </div>
+          <div area-option>
+            <select v-model="selectProvince" @change="provinceChange" class="sele">
+              <option v-for="(item,index) in provinceList" :value="item" :key="index">{{item.name}}</option>
+            </select>
+            <select v-model="selectCity" @change="cityChange" class="sele">
+              <option v-for="(item,index) in cityList" :value="item" :key="index">{{item.name}}</option>
+            </select>
+            <select v-model="selectArea" class="sele">
+              <option v-for="(item,index) in areaList" :value="item" :key="index">{{item}}</option>
+            </select>
+          </div>
         </div>
-        <div area-option>
-          <select v-model="selectProvince" @change="provinceChange" class="sele">
-            <option v-for="(item,index) in provinceList" :value="item" :key="index">{{item.name}}</option>
-          </select>
-          <select v-model="selectCity" @change="cityChange" class="sele">
-            <option v-for="(item,index) in cityList" :value="item" :key="index">{{item.name}}</option>
-          </select>
-          <select v-model="selectArea" class="sele">
-            <option v-for="(item,index) in areaList" :value="item" :key="index">{{item}}</option>
-          </select>
-        </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -515,8 +517,6 @@ export default {
           that.selectCity = that.provinceList[0].cityList[0]
           that.selectArea = that.provinceList[0].cityList[0].areaList[0]
 
-          console.log(that.provinceList[0].cityList)
-          console.log(that.cityList);
       })
       .catch(function(error) {
         console.log(error);
@@ -529,9 +529,11 @@ export default {
       cityList:[],
       areaList:[],
 
-      selectProvince:[],
-      selectCity:[],
-      selectArea:[],
+      selectProvince:"",
+      selectCity:"",
+      selectArea:"",
+      selectProvince:"",
+      
 
       proList:{},
       mask:false,
@@ -1652,6 +1654,8 @@ a{
   background-color: #fff;
   border-radius: 5%;
   text-align: center;
+  /* transform: translateY(-100%);
+  transition: 2s; */
 }
 .nav{
   padding: 10px 0px;
@@ -1659,7 +1663,7 @@ a{
 }
 .nav-icon{
   float: right;
-  padding: 0 10px 0 0;
+  padding: 0 10px;
   font-size: 14px;
   color: #999;
 }
@@ -1673,6 +1677,12 @@ a{
   border: none;
   border-bottom: 1px solid #f2f2f2;
 }
+/* .v-enter-active{
+  transition: all 2s;
+}
+.v-enter{
+  transform: translateY(100px);
+} */
 
 
 </style>

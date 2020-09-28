@@ -8,7 +8,8 @@ import roblist from "./components/home/roblisting.vue";
 import shopcart from "./components/home/shopcart.vue";
 import prodetail from "./components/home/prodetail.vue";
 
-import login from "./components/home/login.vue"//登录界面
+import login from "./components/home/login.vue";//登录界面
+import search from "./components/home/search.vue";
 
 import Vue from "vue";
 import VueRouter from "vue-router";
@@ -51,6 +52,10 @@ export default new VueRouter({
         {
           path:'/enter',
           component: mine
+        },
+        {
+          path:"/search",
+          component: search
         }
       ]
     },
