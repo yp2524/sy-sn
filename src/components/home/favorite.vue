@@ -10,7 +10,7 @@
       </a>
     </div>
     
-    <router-link :to="skip" class="fix-login">
+    <router-link :to="skip" class="fix-login" v-if="isLogin==false">
       <img src="../../images/favImg/fix2.png" alt="">
     </router-link>
    
@@ -25,7 +25,10 @@
         <div class="fav-head-gif">
           <img src="../../images/favImg/head-title.gif" alt />
         </div>
-        <router-link to="/mine" class="denglu">
+        <router-link to="/mine" class="denglu" v-if="isLogin==false">
+            <img src="../../images/favImg/denglu.png" alt />     
+        </router-link>
+        <router-link to="/enter" class="denglu" v-else>
             <img src="../../images/favImg/denglu.png" alt />     
         </router-link>
       </div>
@@ -561,6 +564,9 @@ export default {
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
+    },
+    isLogin(){
+      return this.$store.state.isLogin;
     }
   },
   methods: {
@@ -595,7 +601,7 @@ export default {
             this.$emit('scrollEve',"houseyellow"),
             this.subShow=true;
         }else{
-            this.$emit('scrollEve',"favorite");
+            this.$emit('scrollEve',"/favorite");
             this.subShow=false;
         }
     },
@@ -1075,7 +1081,7 @@ a {
 }
 .proName {
   width: 100%;
-  height: 43px;
+  height: 40px;
   font-size: 13px;
   font-weight: bold;
   padding: 6px 4px 0px 4px;

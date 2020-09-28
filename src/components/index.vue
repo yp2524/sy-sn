@@ -6,7 +6,7 @@
 
     <template>
       <div class="index-bottom">
-        <div v-if="comName=='favorite'" @click="changeCom('favorite')">
+        <div v-if="comName=='/favorite'" @click="changeCom('favorite')">
           <img src="../images/bottomImg/heart-yellow.png" alt />
           <p class="love">猜你喜欢</p>
         </div>
@@ -23,11 +23,12 @@
         </div>
 
         <div @click="changeCom('classify')">
-          <img v-if="comName=='classify'" src="../images/bottomImg/magglass-yellow.png" alt />
+          <img v-if="comName=='/classify'" src="../images/bottomImg/magglass-yellow.png" alt />
           <img v-else src="../images/bottomImg/magglass.png" alt />
           <p>分类</p>
         </div>
-        <template v-if="comName=='favorite'">
+
+        <template v-if="comName=='/favorite'">
           <div @click="changeCom('rankinglist')">
             <a href="https://c.m.suning.com/phbChannel.html?safp=f73ee1cf.wapindex7.113464329889.3&safpn=10001">
               <img v-if="comName=='rankinglist'" src="../images/bottomImg/ranklist-yellow.png" alt />
@@ -55,13 +56,13 @@
           </div>
         </template>
         <div @click="changeCom('shopcart')">
-          <img v-if="comName=='shopcart'" src="../images/bottomImg/cart-yellow.png" alt />
+          <img v-if="comName=='/shopcart'" src="../images/bottomImg/cart-yellow.png" alt />
           <img v-else src="../images/bottomImg/cart.png" alt />
           <p>购物车</p>
         </div>
 
-        <div @click="changeCom('mine')">
-          <img v-if="comName=='mine'" src="../images/bottomImg/mine-yellow.png" alt />
+        <div @click="changeCom('mine')" >
+          <img v-if="comName=='/mine'||comName=='/enter'" src="../images/bottomImg/mine-yellow.png" alt />
           <img v-else src="../images/bottomImg/mine.png" alt />
           <p>我的易购</p>
         </div>
@@ -74,15 +75,37 @@ export default {
   data() {
     return {
       comName: "favorite"
-    };
+    }
+  },
+ 
+  computed:{
+    isLogin(){
+      return this.$store.state.isLogin;
+    }
+  },
+  watch:{
+    $route(to,from){
+      this.comName=to.path;
+      localStorage.setItem("curRouter",to.path);
+    }
+  },
+  created(){
+      this.comName=localStorage.getItem("curRouter");
   },
   methods: {
     changeCom(name) {
-      this.comName = name;
+      
       if(name=='rankinglist'||name=='roblist'){
 
+      }else if(name=='mine'){
+          if(this.isLogin==true){
+            this.$router.push({ path: "/enter" });
+          }else{
+            this.$router.push({ path: "/mine" });
+          }
       }else{
           this.$router.push({ path: `/${name}` });
+          
       }
       
     },

@@ -13,10 +13,12 @@
           <!-- 手机号 -->
           <div class="phone">
               <input type="text" v-model="phoneNum" placeholder="请输入手机号/用户名/邮箱" class="phone-number">
+                
           </div>
           <!-- password -->
           <div class="password">
               <input :type="pwdType" v-model="password" placeholder="请输入密码" class="phone-number">
+          
               <div class="password-icon">
                   <img src="../../images/favImg/login2.png" @click="imgclick" v-show="icon" alt="">
                   <img src="../../images/favImg/login3.png" @click="imgclick" v-show="!icon" alt="">
@@ -25,7 +27,7 @@
           </div>
           <!-- 登录 -->
           <div class="register">
-              <a href="" class="register-p1" @click.prevent="enter">登录</a>
+              <a href="" class="register-p1" @click.prevent="enter(phoneNum,password)">登录</a>
               <a href="" class="register-p2">验证码登录</a>
           </div>
       </div>
@@ -69,22 +71,10 @@ export default {
             this.pwdType = this.pwdType == 'password'?'text':'password';
         },
         // 登录
-        enter(){
-            var name = this.phoneNum;
-            var pass = this.password;
-
-            if(name==''|| name==null){
-                alert("请输入正确的用户名")
-            } else if(pass=='' || pass==null || pass!=111){
-                alert("请输入正确的密码");
-                return;
-            };
-            if(name==123456 && pass==111){
-                this.$router.push("/enter")
-            }
-            console.log(this.enter)
-                       
-        },        
+        enter(phoneNum,password){
+            this.$store.commit("enter",{name:phoneNum,pass:password})
+            this.$router.push("/enter")        
+        }      
     },
 }
 </script>
