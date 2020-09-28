@@ -2,7 +2,7 @@
   <div class="classify">
     <div class="classify-title">
       <p>商品分类</p>
-      <div class="iconfont">
+      <div class="iconfont" @click="search">
           <span>&#xe607;</span>
           <span>中秋悦礼 满199减60</span>
       </div>
@@ -57,6 +57,9 @@ export default {
             this.num=index;
             this.comsnum=index%6;
             this.comName=this.classMenuList[index].comName;
+        },
+        search(){
+            this.$router.push("/search")
         }
     },
     components:{

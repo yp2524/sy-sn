@@ -32,9 +32,9 @@
             <img src="../../images/favImg/denglu.png" alt />     
         </router-link>
       </div>
-      <div class="fav-head-input">
-        <input type="search" placeholder="中秋悦礼 满199减60" class="search" />
-      </div>
+      <router-link to="/search" class="fav-head-input">
+          <input type="search" placeholder="中秋悦礼 满199减60" class="search" />
+      </router-link>
     </div>
     <!-- 内容 -->
     <!-- 轮播图 -->
@@ -542,7 +542,7 @@ export default {
         autoplay: true //自动轮播
       },
 
-       swiperOptionsVer: {
+      swiperOptionsVer: {
         loop: true,
         autoplay: true, //自动轮播
         // direction: 'vertical',
