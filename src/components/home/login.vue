@@ -57,12 +57,17 @@
 <script>
 import axios from "axios";
 export default {
+    computed:{
+        isLogin(){
+            return this.$store.state.isLogin;
+    }
+    },
     data(){
         return{
             icon:true,
             phoneNum:'',
             password:'',
-            pwdType:'password'
+            pwdType:'password',
         }
     },
     methods:{
@@ -72,8 +77,21 @@ export default {
         },
         // 登录
         enter(phoneNum,password){
-            this.$store.commit("enter",{name:phoneNum,pass:password})
-            this.$router.push("/enter")        
+            if(phoneNum==''|| phoneNum==null){
+                alert("请输入正确的用户名")
+            } else if(password=='' || password==null || password!=111){
+                alert("请输入正确的密码");
+                return
+            };
+            if(phoneNum==123456 && password==111){ 
+                this.$store.commit("enter")
+                this.$router.push({path:"/enter"})
+            }      
+
+            
+            
+            
+                   
         }      
     },
 }

@@ -11,6 +11,12 @@
       <div v-if="isEdit" class="cart-top-right" @click="isEdit=!isEdit">编辑</div>
       <div v-else class="cart-top-right" @click="isEdit=!isEdit">完成</div>
     </div>
+    <div class="go-login" @click="goLogin" v-if="isLogin==false">
+      <div>
+        <p>登录后同步电脑与手机购物车的商品</p>
+        <div>去登录</div>
+      </div>
+    </div>
     <div class="cart-main" v-show="proLists.length>0">
       <div class="pro-list" v-for="(item,index) in proLists" :key="index">
         <div class="pro-store">
@@ -132,6 +138,9 @@ export default {
   computed: {
     proLists() {
       return this.$store.state.proLists;
+    },
+     isLogin(){
+      return this.$store.state.isLogin;
     }
   },
   data() {
@@ -282,6 +291,9 @@ export default {
     prodel(index) {
       this.proLists.splice(index, 1);
       this.$refs.touchBox[index].style = `left:0px`;
+    },
+    goLogin(){
+      this.$router.push({path:"/mine"});
     }
   }
 };
@@ -350,6 +362,31 @@ export default {
   font-size: 14px;
   color: #37f;
   margin-right: 3%;
+}
+.go-login{
+  height: 5%;
+  padding: 0 3%;
+  margin-top: 3%;
+}
+.go-login>div{
+  height: 100%;
+  background-color: #ffe37e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 7px;
+}
+.go-login>div>p{
+  font-size: 12px;
+  width: 85%;
+  padding-left: 3%;
+}
+.go-login>div>div{
+  background-color: #222;
+  color:#ffe37e;
+  font-size: 12px;
+  padding: 1% 1%;
+  border-radius: 5px;
 }
 .cart-main {
   padding: 3%;

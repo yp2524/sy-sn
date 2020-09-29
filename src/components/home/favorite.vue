@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite-component" ref="topScroll">
+  <div class="favorite-component iconfont" ref="topScroll">
     <!-- 固定定位 -->
     <div class="fix-pic">
       <a href>
@@ -525,6 +525,13 @@
         </div>
       </div>
     </div>
+    <div class="coverNewman" v-if="coverNewmanisShow">
+      <div>
+        <div><span @click="coverNewmanisShow=false">&#xe615;</span></div>
+        <img src="../../images/favImg/recomm.png" alt="">
+       
+      </div>
+    </div>
   </div>
 </template>
 
@@ -540,7 +547,8 @@ export default {
         },
         loop: true,
         autoplay: true //自动轮播
-      },
+         
+    },
 
       swiperOptionsVer: {
         loop: true,
@@ -558,7 +566,8 @@ export default {
       list: [],
       subShow:false,
       // skip
-      skip:"/mine"
+      skip:"/mine",
+      coverNewmanisShow:true
     };
   },
   computed: {
@@ -656,6 +665,7 @@ a {
 .fix-login{
   position: fixed;
   bottom: 42px;
+  z-index: 9;
 }
 .fix-login img{
   width: 100%;
@@ -1116,6 +1126,46 @@ a {
   font-size: 12px;
   color: #999999;
   margin-left: 10px;
+}
+.coverNewman{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coverNewman>div{
+  width:90%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.coverNewman>div>div{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.coverNewman>div>div>span{
+  border: 1px solid #fff;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+}
+.coverNewman>div>img{
+  width: 100%;
 }
 </style>
 
