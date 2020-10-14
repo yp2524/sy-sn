@@ -181,21 +181,10 @@ export default {
   },
   methods: {
     minus(index) {
-      this.proLists[index].proNum--;
-      if (this.proLists[index].proNum < 1) {
-        this.proLists[index].proNum = 1;
-      }
-      this.proLists[index].totalPrice =
-        parseFloat(
-          this.proLists[index].price[0] + this.proLists[index].price[1]
-        ) * this.proLists[index].proNum;
+      this.$store.commit('minusStore',index)
     },
     add(index) {
-      this.proLists[index].proNum++;
-      this.proLists[index].totalPrice =
-        parseFloat(
-          this.proLists[index].price[0] + this.proLists[index].price[1]
-        ) * this.proLists[index].proNum;
+      this.$store.commit('addStore',index)
     },
     storeSelect(index) {
       if (this.$refs.storeSel[index].checked == true) {

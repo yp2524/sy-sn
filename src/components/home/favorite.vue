@@ -604,7 +604,7 @@ export default {
     proDetaTo(index){
         this.$router.push({path:"/prodetail",query:{id:index}});
     },
-    scrollEvent(){
+    scrollEvent(){    //滚动修改首页导航图标
         let top=this.$refs.topScroll.scrollTop;
         if(top>1000){
             this.$emit('scrollEve',"houseyellow"),
@@ -617,7 +617,7 @@ export default {
 
   },
 
-  mounted() {
+  mounted() {  
     this.countTime();
     this.$refs.topScroll.addEventListener('scroll', this.scrollEvent, true)
   },
