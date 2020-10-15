@@ -1,7 +1,8 @@
 <template>
-  <div class="login">
+  <div class="login iconfont">
     <div class="navurl">
-      <a href>联系客服</a>
+        <a @click.prevent="goBack">&#xe6ec;</a>
+      <a href="" @click.prevent="">联系客服</a>
     </div>
     <!-- login界面 -->
     <div class="login-content">
@@ -39,7 +40,6 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   computed: {
   },
@@ -52,6 +52,9 @@ export default {
     imgclick() {
       this.icon = !this.icon;
       this.pwdType = this.pwdType == "password" ? "text" : "password";
+    },
+    goBack(){
+        this.$router.go(-1);
     }
   }
 };
@@ -68,11 +71,17 @@ a {
 .navurl {
   padding: 10px;
   text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navurl a {
   font-size: 12px;
   color: #222;
   padding: 0px 10px;
+}
+.navurl a:first-child{
+    font-size: 18px;
 }
 
 /* login界面 */
