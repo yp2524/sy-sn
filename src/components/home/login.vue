@@ -2,7 +2,7 @@
   <div class="login">
       <div class="navurl">
           <a href="">联系客服</a>
-          <a href="">企业注册</a>
+          <a href="" @click.prevent="register">企业注册</a>
       </div>
     <!-- login界面 -->
       <div class="login-content">
@@ -86,12 +86,10 @@ export default {
             if(phoneNum==123456 && password==111){ 
                 this.$store.commit("enter")
                 this.$router.push({path:"/enter"})
-            }      
-
-            
-            
-            
-                   
+            }               
+        },
+        register(){
+            this.$router.push({path:'/register'})
         }      
     },
 }

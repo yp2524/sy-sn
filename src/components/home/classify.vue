@@ -122,6 +122,7 @@ html,body,.classify{
     line-height: 45px;
     font-size: 12px;
     color: #666;
+    list-style: none;
 }
 .classify-main>.prolist{
     width: 75%;

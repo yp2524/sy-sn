@@ -10,6 +10,7 @@ import prodetail from "./components/home/prodetail.vue";
 
 import login from "./components/home/login.vue";//登录界面
 import search from "./components/home/search.vue";
+import register from "./components/home/register.vue"
 
 import Vue from "vue";
 import VueRouter from "vue-router";
@@ -66,6 +67,10 @@ export default new VueRouter({
     {
       path:"/prodetail",
       component:prodetail
+    },
+    {
+      path:"/register",
+      component:register
     }
   ]
 });
